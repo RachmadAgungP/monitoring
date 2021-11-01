@@ -35,3 +35,79 @@
     </div>
 </div>
 @endsection
+@push('scripts')
+<script>
+    $(".asalfilter").on('change', function() {
+        let categorys = $("#asalfilters").val()
+        // console.log(categorys)
+        $("#asalgudang").children().remove();
+        $("#asalgudang").val('');
+        $("#asalgudang").append('<option value="0">Pilih Gudang </option>');
+        $("#asalgudang").prop('disable', true);
+
+        if (categorys != '0' && categorys != 0) {
+            $.ajax({
+                url: "/jalur-alihstok/categoryasalgudang/" + categorys,
+                type: "GET",
+                // data: {'statuscategorys':statuscategorys},
+                success: function(data) {
+                    var dataObj = Object.values(data)[0];
+                    var dataObjVal = Object.values(dataObj);
+                    // console.log(dataObjVal);
+                    var dataObjKey = Object.keys(dataObj);
+                    $("#asalgudang").prop('disable', false);
+                    let tampilan_option = '';
+                    for (let i = 0; i < dataObjVal.length; i++) {
+                        tampilan_option += "<option value="+"'"+dataObjVal[i]+"'"+">"+dataObjVal[i]+"</option>";
+                        // console.log(Object.values(dataObj).length)
+                    }
+                    $("#asalgudang").append(tampilan_option)
+                    // console.log(tampilan_option)
+                }
+            });
+        }
+    });
+
+    $(".asalgudang").on('change', function() {
+        let gedungpilih = $("#asalgudang").val()
+        console.log(gedungpilih)
+    });
+
+    
+    $(".tujuanfilter").on('change', function() {
+        let categorys = $("#tujuanfilters").val()
+        // console.log(categorys)
+        $("#tujuangudang").children().remove();
+        $("#tujuangudang").val('');
+        $("#tujuangudang").append('<option value="0">Pilih Gudang </option>');
+        $("#tujuangudang").prop('disable', true);
+
+        if (categorys != '0' && categorys != 0) {
+            $.ajax({
+                url: "/jalur-alihstok/categorytujuangudang/" + categorys,
+                type: "GET",
+                // data: {'statuscategorys':statuscategorys},
+                success: function(data) {
+                    var dataObj = Object.values(data)[0];
+                    var dataObjVal = Object.values(dataObj);
+                    // console.log(dataObjVal);
+                    var dataObjKey = Object.keys(dataObj);
+                    $("#tujuangudang").prop('disable', false);
+                    let tampilan_option = '';
+                    for (let i = 0; i < dataObjVal.length; i++) {
+                        tampilan_option += "<option value="+"'"+dataObjVal[i]+"'"+">"+dataObjVal[i]+"</option>";
+                        // console.log(Object.values(dataObj).length)
+                    }
+                    $("#tujuangudang").append(tampilan_option)
+                    // console.log(tampilan_option)
+                }
+            });
+        }
+    });
+
+    $(".tujuangudang").on('change', function() {
+        let gedungpilih = $("#tujuangudang").val()
+        console.log(gedungpilih)
+    });
+</script>
+@endpush
