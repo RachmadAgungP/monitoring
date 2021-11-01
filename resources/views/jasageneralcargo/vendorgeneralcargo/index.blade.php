@@ -15,7 +15,7 @@
                     <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modal-import">Import data Excel</button>
           <div class="modal fade" id="modal-import">
             <div class="modal-dialog modal-lg">
-              <form method="post" id="form-import" action="{{route('importdatavendorvoyage')}}" enctype="multipart/form-data" class="modal-content">
+              <form method="post" id="form-import" action="{{route('importdatavendorgeneralcargo')}}" enctype="multipart/form-data" class="modal-content">
                 <div class="modal-header">
                   <h4 class="modal-title">Import Data vendor general cargo nama file harus sama</h4>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">

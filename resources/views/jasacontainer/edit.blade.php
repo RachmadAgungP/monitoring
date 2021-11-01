@@ -16,14 +16,14 @@
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label text-md-right">rute</label>
                         <div class="col-md-6">
-                            {{ Form::select('kode_rute',$jalur_container,null,['class'=>'from-control selects','disabled','placeholder'=>'pilih rute'])}}
+                            {{ Form::select('kode_rutes',$jalur_container,null,['class'=>'from-control selects','disabled','placeholder'=>'pilih rute'])}}
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label text-md-right">Vendor</label>
                         <div class="col-md-6">
-                            {{ Form::select('nama_vendor',$vendor_container,null,['class'=>'from-control selects','disabled','placeholder'=>'pilih vendor'])}}
+                            {{ Form::select('nama_vendor',$vendor_container,null,['class'=>'from-control selects','placeholder'=>'pilih vendor'])}}
                         </div>
                     </div>
                     @include('jasacontainer.form')

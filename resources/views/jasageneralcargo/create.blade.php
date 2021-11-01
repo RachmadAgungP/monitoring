@@ -13,7 +13,7 @@
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label text-md-right">Rute</label>
                         <div class="col-md-6">
-                            {{ Form::select('kode_rute',$jalur_generalcargo,null,['class'=>'from-control selects','placeholder'=>'id Rute'])}}
+                            {{ Form::select('kode_rutes',$jalur_generalcargo,null,['class'=>'from-control selects','placeholder'=>'id Rute'])}}
                         </div>
                     </div>
                     @include('jasageneralcargo.form')

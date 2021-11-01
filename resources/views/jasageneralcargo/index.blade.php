@@ -59,7 +59,8 @@
             <hr>
             <label><b>Filter status Category</b></label>
             <select class="form-control filter" id="filters">
-              <option value="0">Pilih Status Ketegory </option>
+            <option value="@isset ($default_key){{$default_key}}@else{{"0"}}@endisset">Pilih Status Ketegory </option>
+              <option value="0">Ambil Semua Data</option>
               <option value="1">Masih Lama</option>
               <option value="2">
                 < 1 tahun</option>
@@ -166,7 +167,7 @@
         "targets": 1,
         "class": "text-nowrap",
         "render": function(data, type, row, meta) {
-          return row.kode_rute;
+          return row.kode_rutes;
         }
       },
       

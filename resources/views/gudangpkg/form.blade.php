@@ -35,9 +35,23 @@
     </div>
     
     <div class="form-group row">
+        <label class="col-md-2 col-form-label text-md-right">Kapasitas Anper Lain</label>
+        <div class="col-md-6">
+            {{ Form::number('Kapasitas_Anper_Lain',null,['class'=>'from-control','placeholder'=>'Kapasitas Anper Lain'])}}
+        </div>
+    </div>
+    
+    <div class="form-group row">
         <label class="col-md-2 col-form-label text-md-right">Sewa Gudang Rp/bulan</label>
         <div class="col-md-6">
             {{ Form::number('sewa_Gudang_Rpbulan',null,['class'=>'from-control','placeholder'=>'Sewa Gudang Rp/bulan'])}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-md-2 col-form-label text-md-right">Pengolahan Stock Rp/bulan</label>
+        <div class="col-md-6">
+            {{ Form::number('pengelolan_Stock_Rpbulan',null,['class'=>'from-control','placeholder'=>'Pengolahan Rp/bulan'])}}
         </div>
     </div>
 

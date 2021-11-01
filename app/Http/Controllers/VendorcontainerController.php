@@ -52,7 +52,7 @@ class VendorcontainerController extends Controller
     {
         $request->validate([
             // 'id_vendor' => 'required|unique:vendor_container|min:4',
-            'nama_vendor' => 'required|min:2',
+            'nama_vendor' => 'required',
             'keterangan_vendor'     =>'required',
         ]);
 
@@ -94,7 +94,7 @@ class VendorcontainerController extends Controller
     public function update(Request $request, $id_Vendor)
     {
         $request->validate([
-            'nama_vendor' => 'required|min:2',
+            'nama_vendor' => 'required',
             'keterangan_vendor'     =>'required',
         ]);
 

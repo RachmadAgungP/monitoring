@@ -35,7 +35,7 @@ class JasatimecharterController extends Controller
         return Datatables::of($data['jasatimecharters'])
             ->addColumn('status', function ($row) {
                 $diff  = date_diff(date_create(), date_create($row->akhir));
-                $status = (int)$diff->format('%r%a hari');
+                $status = $diff->format('%r%a Hari');
                 return $status;
             })
 
@@ -144,8 +144,6 @@ class JasatimecharterController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'id'=> 'required',
-            'nama_angkutan'=> 'required',
             'nama_vendor' => 'required',
             'kelas_kapasitas' => 'required',
             'tarif' => 'required',

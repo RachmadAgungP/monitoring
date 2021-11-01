@@ -15,7 +15,7 @@ class JasacontainerImport implements ToModel
     public function model(array $row)
     {
         return new Jasacontainer([
-            'kode_rute' => $row['kode_rute'],
+            'kode_rutes' => $row['kode_rutes'],
             'nama_vendor'=> $row['nama_vendor'],
             'status_pemenang'=> $row['status_pemenang'],
             'kontrak'=> $row['kontrak'],

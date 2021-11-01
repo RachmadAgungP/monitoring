@@ -54,8 +54,8 @@ class VendorgeneralcargoController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            // 'id_vendor' => 'required|unique:vendor_voyage|min:4',
-            'nama_vendor' => 'required|min:2',
+            'id_vendor' => 'required',
+            'nama_vendor' => 'required',
             'keterangan_vendor'     =>'required',
         ]);
 
@@ -94,14 +94,14 @@ class VendorgeneralcargoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id_Vendor)
+    public function update(Request $request, $id_vendor)
     {
         $request->validate([
-            'nama_vendor' => 'required|min:2',
+            'nama_vendor' => 'required',
             'keterangan_vendor'     =>'required',
         ]);
 
-        $vendorgeneralcargo =  Vendorgeneralcargo::where('id_Vendor','=',$id_Vendor);
+        $vendorgeneralcargo =  Vendorgeneralcargo::where('id_vendor','=',$id_vendor);
         $vendorgeneralcargo->update($request -> except('_method','_token'));
         return redirect("/vendor-general-cargo");
     }
@@ -112,9 +112,9 @@ class VendorgeneralcargoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id_Vendor)
+    public function destroy($id_vendor)
     {
-        $vendorgeneralcargo = Vendorgeneralcargo::where('id_Vendor','=',$id_Vendor);
+        $vendorgeneralcargo = Vendorgeneralcargo::where('id_vendor','=',$id_vendor);
         $vendorgeneralcargo->delete();
         return redirect("/vendor-general-cargo");
     }
