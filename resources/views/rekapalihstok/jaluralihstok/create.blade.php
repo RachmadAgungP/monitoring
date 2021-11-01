@@ -38,6 +38,10 @@
 
 @push('scripts')
 <script>
+    // $(".asalfilter").on('change', function() {
+    //     let categorys = $("#asalfilters").val()
+    //     console.log(categorys);
+    // });
     // let statuscategorys = $("#asalfilters").val();
     $(".asalfilter").on('change', function() {
         let categorys = $("#asalfilters").val()
@@ -64,7 +68,6 @@
                         // console.log(Object.values(dataObj).length)
                     }
                     $("#asalgudang").append(tampilan_option)
-                    // console.log(tampilan_option)
                 }
             });
         }

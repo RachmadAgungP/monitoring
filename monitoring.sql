@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Okt 2021 pada 15.48
+-- Waktu pembuatan: 01 Nov 2021 pada 05.17
 -- Versi server: 10.4.13-MariaDB
 -- Versi PHP: 7.4.7
 
@@ -40,7 +40,7 @@ CREATE TABLE `angkutan_time` (
 --
 
 INSERT INTO `angkutan_time` (`kode_angkutan`, `nama_angkutan`, `keterangan_angkutan`, `created_at`, `updated_at`) VALUES
-(1, 'KM Anugerah Buana VI', 'KM Anugerah Buana VI k', NULL, '2021-10-05 00:55:09'),
+(1, 'KM Anugerah Buana VI', '-', NULL, '2021-10-27 20:49:58'),
 (2, 'PT Kapuas Mekar Jaya', '-', '2021-10-05 00:58:34', '2021-10-05 00:58:34'),
 (3, 'PT Linc Bintang Line', '-', '2021-10-05 00:58:34', '2021-10-05 00:58:34');
 
@@ -103,7 +103,8 @@ CREATE TABLE `gudang_pkg` (
 --
 
 INSERT INTO `gudang_pkg` (`id`, `lokasi_gudang`, `alamat_gudang`, `provinsi`, `nama_rekanan`, `kap_GP_Ton`, `Kapasitas_Anper_Lain`, `sewa_Gudang_Rpbulan`, `pengelolan_Stock_Rpbulan`, `BM_RpTon`, `rebag_RpTon`, `lembur_RpTon`, `restapel_RpTon`, `nomor_surat`, `tgl_kontrak`, `mulai`, `akhir`, `jenis_surat`, `keterangan`, `created_at`, `updated_at`) VALUES
-(1, 'GP Aceh Tamiang (Langsa)', 'Jl. Kuala Simpang Langsa Km 12 Tanjung Seumantah-Manyak Payed-Kab. Aceh Tamiang-Aceh', 'Aceh', 'PT Varuna Tirta Prakasya (Persero)', 1000, 0, 8750000, 14840000, 41000, 82000, 82000, 82000, '0458/B/HK.01.02/35/SP/2020', '2020-04-27', '2020-04-01', '2021-04-30', 'Kontrak/ SP', '-', NULL, NULL);
+(1, 'GP Aceh Tamiang (Langsa)', 'Jl. Kuala Simpang Langsa Km 12 Tanjung Seumantah-Manyak Payed-Kab. Aceh Tamiang-Aceh', 'Aceh', 'PT Varuna Tirta Prakasya (Persero)', 1000, 0, 8750000, 14840000, 41000, 82000, 82000, 82000, '0458/B/HK.01.02/35/SP/2020', '2020-04-27', '2020-04-01', '2022-08-28', 'Kontrak/ SP', '-', NULL, '2021-10-31 17:39:08'),
+(2, 'ASDASD', 'asd', 'Aceh', 'CV Bintang Enim', 123, 123, 123, 123, 123, 123, 123, 123, '1231', '2021-11-02', '2021-11-11', '2021-11-27', 'dasdad', 'ASDASD', '2021-10-31 17:59:07', '2021-10-31 17:59:07');
 
 -- --------------------------------------------------------
 
@@ -150,8 +151,74 @@ CREATE TABLE `jalur_container` (
 --
 
 INSERT INTO `jalur_container` (`kode_rute`, `asal`, `tujuan`, `wilayah`, `tarif`, `created_at`, `updated_at`) VALUES
-('Gresik-Gorontalo', 'Gresik', 'Gorontalo', 'Kalimantan Tengah', 400000, '2021-10-25 22:26:02', '2021-10-25 23:44:35'),
-('gresik-kendari1', 'Kabupaten Gresik', 'Kendari1', 'Jawa Timur', 400000, '2021-10-26 19:11:05', '2021-10-26 19:11:05');
+('Gresik-Ambon', 'Kabupaten Gresik', 'Kota Ambon', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', 576296, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Attambua', 'Kabupaten Gresik', 'Attambua', 'NTT & NTB', 572000, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Balikpapan', 'Kabupaten Gresik', 'Kota Balikpapan', 'Kalimantan', 448864, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Banjarmasin', 'Kabupaten Gresik', 'Kota Banjarmasin', 'Kalimantan', 380982, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Bau-Bau', 'Kabupaten Gresik', 'Kota Bau-Bau', 'Sulawesi', 477134, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Belitung', 'Kabupaten Gresik', 'Kota Belitung', 'Sumatera', 716982, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Bengkulu', 'Kabupaten Gresik', 'Kota Bengkulu', 'Sumatera', 656546, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Biak', 'Kabupaten Gresik', 'Kabupaten Biak Numfor', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', 720682, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Bima', 'Kabupaten Gresik', 'Kota Bima', 'NTT & NTB', 610864, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Bitung', 'Kabupaten Gresik', 'Kota Bitung', 'Sulawesi', 487546, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Bulungan', 'Kabupaten Gresik', 'Kabupaten Bulungan', 'Kalimantan', 854984, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Dumai', 'Kabupaten Gresik', 'Kota Dumai', 'Sumatera', 457500, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Ende', 'Kabupaten Gresik', 'Kabupaten Ende', 'NTT & NTB', 465364, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Fakfak', 'Kabupaten Gresik', 'Kabupaten Fakfak', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', 837132, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Gorontalo', 'Kabupaten Gresik', 'Kabupaten Gorontalo', 'Sulawesi', 503546, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-IndragiriHulu', 'Kabupaten Gresik', 'Kabupaten Indragiri Hulu', 'Sumatera', 589000, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Jambi', 'Kabupaten Gresik', 'Kota Jambi', 'Sumatera', 647119, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Jayapura / Keroom', 'Kabupaten Gresik', 'Kabupaten Jayapura', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', 657082, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Kaimana', 'Kabupaten Gresik', 'Kabupaten Kaimana', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', 827182, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Kendari', 'Kabupaten Gresik', 'Kota Kendari', 'Sulawesi', 475864, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Kolaka', 'Kabupaten Gresik', 'KabupatenKolaka', 'Sulawesi', 580364, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-KotawaringinBarat', 'Kabupaten Gresik', 'Kabupaten Kotawaringin Barat', 'Kalimantan', 421182, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Kupang', 'Kabupaten Gresik', 'Kabupaten Kupang', 'NTT & NTB', 476364, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-L. Banggai / Bunta', 'Kabupaten Gresik', 'L. Banggai / Bunta', 'Sulawesi', 740182, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-L. Banggai / Toili', 'Kabupaten Gresik', 'L. Banggai / Toili', 'Sulawesi', 668432, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Labuhan Bajo', 'Kabupaten Gresik', 'Kabupaten Manggarai Barat', 'NTT & NTB', 600931, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Lembar', 'Kabupaten Gresik', 'Kabupaten Lombok Barat', 'NTT & NTB', 395382, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Lombok Tengah', 'Kabupaten Gresik', 'Kabupaten Lombok Tengah', 'NTT & NTB', 453182, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Lombok Timur', 'Kabupaten Gresik', 'Kabupaten Lombok Timur', 'NTT & NTB', 461182, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Makassar', 'Kabupaten Gresik', 'Kota Makassar', 'Sulawesi', 371364, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Manokwari', 'Kabupaten Gresik', 'Kabupaten Manokwari', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', 747182, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Medan', 'Kabupaten Gresik', 'Kota Medan', 'Sumatera', 514546, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Merauke I - Tanah Miring', 'Kabupaten Gresik', 'Merauke I - Tanah Miring', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', 680091, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Merauke II - Kota', 'Kabupaten Gresik', 'Merauke II - Kota', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', 621091, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Nabire', 'Kabupaten Gresik', 'Kabupaten Nabire', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', 678082, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Padang', 'Kabupaten Gresik', 'Kota Padang', 'Sumatera', 553546, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Pagatan', 'Kabupaten Gresik', 'Kota Pagatan  / Batulicin', 'Kalimantan', 595182, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Palu', 'Kabupaten Gresik', 'Kota Palu', 'Sulawesi', 430364, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Pangkal Pinang', 'Kabupaten Gresik', 'Kota Pangkal Pinang', 'Sumatera', 630628, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Pare Pare', 'Kabupaten Gresik', 'Kota ParePare', 'Sulawesi', 453364, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Paser', 'Kabupaten Gresik', 'Kabupaten Paser', 'Kalimantan', 615364, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Pekanbaru', 'Kabupaten Gresik', 'Kota Pekanbaru', 'Sumatera', 499820, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Pontianak', 'Kabupaten Gresik', 'Kota Pontianak', 'Kalimantan', 540364, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Pringgabaya', 'Kabupaten Gresik', 'Pringgabaya', 'NTT & NTB', 462182, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Reo', 'Kabupaten Gresik', 'Reo', 'NTT & NTB', 456314, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Samarinda', 'Kabupaten Gresik', 'Kota Samarinda', 'Kalimantan', 480864, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Sampit', 'Kabupaten Gresik', 'Kabupaten Kotawaringin Timur ', 'Kalimantan', 437681, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Siak', 'Kabupaten Gresik', 'Kabupaten Siak', 'Sumatera', 554970, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Sorong', 'Kabupaten Gresik', 'Kabupaten Sorong', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', 676082, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Sumbawa', 'Kabupaten Gresik', 'Kabupaten Sumbawa', 'NTT & NTB', 593182, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-TanjungPinang', 'Kabupaten Gresik', 'Kota Tanjung Pinang', 'Sumatera', 872546, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Tarakan', 'Kabupaten Gresik', 'Kota Tarakan', 'Kalimantan', 605364, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Ternate', 'Kabupaten Gresik', 'Kota Ternate', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', 716846, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Timika', 'Kabupaten Gresik', 'Timika', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', 641159, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Toli-Toli', 'Kabupaten Gresik', 'Kabupaten Toli-Toli', 'Sulawesi', 561064, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Waikabubak / Sumba Barat', 'Kabupaten Gresik', 'Waikabubak / Sumba Barat', 'NTT & NTB', 781364, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Gresik-Waingapu/ Sumba Timur', 'Kabupaten Gresik', 'Waingapu/ Sumba Timur', 'NTT & NTB', 575364, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Makassar-Bitung', 'Kota Makassar', 'Kota Bitung', 'Sulawesi', 396364, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Makassar-Gorontalo', 'Kota Makassar', 'Kbupaten Gorontalo', 'Sulawesi', 428500, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Makassar-Kendari', 'Kota Makassar', 'Kota Kendari', 'Sulawesi', 420000, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Makassar-Manokwari', 'Kota Makassar', 'Kabupaten Manokwari', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', 698546, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Makassar-Merauke I - Tanah Miring', 'Kota Makassar', 'Merauke I - Tanah Miring', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', 596591, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Makassar-Merauke II - Kota', 'Kota Makassar', 'Merauke II - Kota', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', 596591, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Makassar-Nabire', 'Kota Makassar', 'Kabupaten Nabire', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', 658682, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Makassar-Palu', 'Kota Makassar', 'Kota Palu', 'Sulawesi', 436364, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Makassar-Sorong', 'Kota Makassar', 'Kabupaten Sorong', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', 631982, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Makassar-Ternate', 'Kota Makassar', 'Kota Ternate', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', 633400, '2021-10-28 15:24:02', '2021-10-28 15:24:02'),
+('Makassar-Timika', 'Kota Makassar', 'Timika', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', 540682, '2021-10-28 15:24:02', '2021-10-28 15:24:02');
 
 -- --------------------------------------------------------
 
@@ -174,7 +241,8 @@ CREATE TABLE `jalur_generalcargo` (
 --
 
 INSERT INTO `jalur_generalcargo` (`kode_rute`, `asal`, `tujuan`, `wilayah`, `tarif`, `created_at`, `updated_at`) VALUES
-('Gresik-Malteg', 'Gresik', 'Maluku Tengah', 'Maluku', 956746, NULL, '2021-10-26 00:33:34');
+('Gresik-Buru', 'Gresik', 'Kabupaten Buru', 'Maluku', 1039546, '2021-10-30 22:47:57', '2021-10-30 22:47:57'),
+('Gresik-Malteg', 'Gresik', 'Kabupaten Maluku Tengah', 'Maluku', 956746, '2021-10-30 22:47:57', '2021-10-30 22:47:57');
 
 -- --------------------------------------------------------
 
@@ -247,33 +315,36 @@ CREATE TABLE `jalur_voyage` (
 --
 
 INSERT INTO `jalur_voyage` (`kode_rute`, `asal`, `tujuan`, `tarif_lebihdari_10000ton`, `tarif_kurangdari_10000ton`, `created_at`, `updated_at`) VALUES
-(' Gresik-Banjarmasin ', 'Gresik', 'Banjarmasin', '205000', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-(' Gresik-Bima ', 'Gresik', 'Bima', '268000', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-(' Gresik-Dumai ', 'Gresik', 'Dumai', '207350', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-(' Gresik-Ende ', 'Gresik', 'Ende', '0', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-(' Gresik-Makassar ', 'Gresik', 'Makasar', '0', '162500', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-(' Gresik-Pare', 'Gresik', 'Pare - pare', '223000', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-(' Gresik-Sumbawa ', 'Gresik', 'Sumbawa', '224495', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-('Gresik-Bengkulu', 'Gresik', 'Bengkulu', '287000', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-('Gresik-Bitung', 'Gresik', 'Bitung', '330000', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-('Gresik-Gorontalo', 'Gresik', 'Gorontalo', '205000', '0', '2021-10-03 18:44:53', '2021-10-25 22:44:38'),
-('Gresik-Kendari', 'Gresik', 'Kendari', '345000', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-('Gresik-Ketapang', 'Gresik', 'Ketapang', '356500', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-('Gresik-Kumai', 'Gresik', 'Kumai', '315000', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-('Gresik-LabuanB', 'Gresik', 'Labuan Bajo', '360000', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-('Gresik-Lampung', 'Gresik', 'Lampung', '188000', '154500', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-('Gresik-Lembar', 'Gresik', 'Lembar', '196500', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-('Gresik-Lhokseumawe', 'Gresik', 'Lhokseumawe', '334000', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-('Gresik-Medan', 'Gresik', 'Medan', '263000', '198500', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-('Gresik-Padang', 'Gresik', 'Padang', '283000', '253300', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-('Gresik-PangkalP', 'Gresik', 'Pangkal Pinang', '300000', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-('Gresik-Pontianak', 'Gresik', 'Pontianak', '247875', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-('Gresik-Samarinda', 'Gresik', 'Samarinda', '255000', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-('Singkawang-Banjarmasin', 'Singkawang', 'Banjarmasin', '700000', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-('Singkawang-Gresik', 'Singkawang', 'Gresik', '390000', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-('Singkawang-Lombok', 'Singkawang', 'Lombok', '588000', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-('Singkawang-Makassar', 'Singkawang', 'Makassar', '613000', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34'),
-('Singkawang-PangkalP', 'Singkawang', 'Pangkal Pinang', '438000', '0', '2021-10-26 17:40:34', '2021-10-26 17:40:34');
+('Gresik-Banjarmasin', 'Kabupaten Gresik', ' Kota Banjarmasin ', '205000', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-Bengkulu', 'Kabupaten Gresik', 'Kota Bengkulu', '287000', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-Bima', 'Kabupaten Gresik', ' Kota Bima ', '268000', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-Bitung', 'Kabupaten Gresik', 'Kota Bitung', '330000', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-Dumai', 'Kabupaten Gresik', ' Kota Dumai ', '207350', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-Ende', 'Kabupaten Gresik', 'Kabupaten Ende ', '0', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-Kendari', 'Kabupaten Gresik', 'Kota Kendari', '345000', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-Ketapang', 'Kabupaten Gresik', 'Kabupaten Ketapang', '356500', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-KotawaringinBrt', 'Kabupaten Gresik', 'Kabupaten Kotawaringin Barat', '315000', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-Lampung', 'Kabupaten Gresik', 'Kota Bandar Lampung', '0', '154500', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-Lampung1', 'Kabupaten Gresik', 'Kota Bandar Lampung', '188000', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-Lhokseumawe', 'Kabupaten Gresik', 'Kota Lhokseumawe', '334000', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-LombokBrt', 'Kabupaten Gresik', 'Kabupaten Lombok Barat', '196500', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-Makassar', 'Kabupaten Gresik', ' Kota Makassar ', '0', '162500', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-Makassar1', 'Kabupaten Gresik', ' Kota Makassar ', '0', '166000', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-ManggaraiBrt', 'Kabupaten Gresik', 'Kabupaten Manggarai Barat', '360000', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-Medan', 'Kabupaten Gresik', 'Kota Medan', '0', '198500', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-Medan1', 'Kabupaten Gresik', 'Kota Medan', '263000', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-Padang', 'Kabupaten Gresik', 'Kota Padang', '0', '253300', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-Padang1', 'Kabupaten Gresik', 'Kota Padang', '283000', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-PangkalPinang', 'Kabupaten Gresik', 'Kota Pangkal Pinang', '300000', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-ParePare', 'Kabupaten Gresik', 'Kota ParePare ', '223000', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-Pontianak', 'Kabupaten Gresik', 'Kota Pontianak', '247875', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-Samarinda', 'Kabupaten Gresik', 'Kota Samarinda', '255000', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Gresik-Sumbawa', 'Kabupaten Gresik', 'Kabupaten Sumbawa ', '224495', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Singkawang-Banjarmasin', 'Kota Singkawang', 'Kota Banjarmasin', '700000', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Singkawang-Gresik', 'Kota Singkawang', 'Kabupaten Gresik', '390000', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Singkawang-Lombok', 'Kota Singkawang', 'Kabupaten Lombok', '588000', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Singkawang-Makassar', 'Kota Singkawang', 'Kota Makassar', '613000', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23'),
+('Singkawang-PangkalPinang', 'Kota Singkawang', 'Kota Pangkal Pinang', '438000', '0', '2021-10-27 16:01:23', '2021-10-27 16:01:23');
 
 -- --------------------------------------------------------
 
@@ -283,7 +354,7 @@ INSERT INTO `jalur_voyage` (`kode_rute`, `asal`, `tujuan`, `tarif_lebihdari_1000
 
 CREATE TABLE `jasacontainer` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `kode_rute` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `kode_rutes` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nama_vendor` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status_pemenang` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `kontrak` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -298,9 +369,9 @@ CREATE TABLE `jasacontainer` (
 -- Dumping data untuk tabel `jasacontainer`
 --
 
-INSERT INTO `jasacontainer` (`id`, `kode_rute`, `nama_vendor`, `status_pemenang`, `kontrak`, `tgl_kontrak`, `mulai`, `akhir`, `created_at`, `updated_at`) VALUES
-(1, 'Gresik-Gorontalo', 'CITRA BORNEO MANDIRI, PT', 'Pemenang I', '3032/B/HK.01.02/35/SP/2019', '2021-09-29', '2021-10-08', '2021-10-30', '2021-10-05 21:00:38', '2021-10-26 01:31:24'),
-(3, 'Gresik-Gorontalo', 'KRIS CARGO BAHTERA, PT', 'Pemenang III', '1404/HK.01.02/35/SP/2019', '2021-09-26', '2021-10-29', '2022-06-11', '2021-10-25 23:46:34', '2021-10-26 14:14:47'),
+INSERT INTO `jasacontainer` (`id`, `kode_rutes`, `nama_vendor`, `status_pemenang`, `kontrak`, `tgl_kontrak`, `mulai`, `akhir`, `created_at`, `updated_at`) VALUES
+(1, 'Gresik-Gorontalo', 'PT ANUGERAH TRANS MARITIM', 'Pemenang I', '3032/B/HK.01.02/35/SP/2019', '2021-09-29', '2021-10-08', '2021-10-30', '2021-10-05 21:00:38', '2021-10-30 22:26:19'),
+(3, 'Gresik-Gorontalo', 'PT KRIS CARGO BAHTERA', 'Pemenang III', '1404/HK.01.02/35/SP/2019', '2021-09-26', '2021-10-29', '2022-06-11', '2021-10-25 23:46:34', '2021-10-30 22:26:26'),
 (4, 'gresik-kendari1', 'KRIS CARGO BAHTERA, PT', 'Pemenang I', '3032/B/HK.01.02/35/SP/2019', '2021-09-27', '2021-10-27', '2022-02-05', '2021-10-26 19:11:39', '2021-10-26 19:11:39');
 
 -- --------------------------------------------------------
@@ -311,7 +382,7 @@ INSERT INTO `jasacontainer` (`id`, `kode_rute`, `nama_vendor`, `status_pemenang`
 
 CREATE TABLE `jasageneralcargo` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `kode_rute` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `kode_rutes` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nama_vendor` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status_pemenang` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `kontrak` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -326,9 +397,10 @@ CREATE TABLE `jasageneralcargo` (
 -- Dumping data untuk tabel `jasageneralcargo`
 --
 
-INSERT INTO `jasageneralcargo` (`id`, `kode_rute`, `nama_vendor`, `status_pemenang`, `kontrak`, `tgl_kontrak`, `mulai`, `akhir`, `created_at`, `updated_at`) VALUES
+INSERT INTO `jasageneralcargo` (`id`, `kode_rutes`, `nama_vendor`, `status_pemenang`, `kontrak`, `tgl_kontrak`, `mulai`, `akhir`, `created_at`, `updated_at`) VALUES
 (4, 'Gresik-Maluku', 'PT. CITRA BORNEO MANDIRI', 'Pemenang I', '3032/B/HK.01.02/35/SP/2019', '2021-10-05', '2021-10-22', '2021-11-06', '2021-10-07 00:36:15', '2021-10-07 00:36:15'),
-(5, 'Gresik-Malteg', 'PT. CITRA BORNEO MANDIRI', 'Pemenang III', '3032/B/HK.01.02/35/SP/2019', '2021-09-26', '2021-10-20', '2021-11-06', '2021-10-26 00:32:35', '2021-10-26 14:12:19');
+(5, 'Gresik-Malteg', 'PT Berkah Samudra Line', 'Pemenang III', '3032/B/HK.01.02/35/SP/2019', '2021-09-26', '2021-10-20', '2021-11-06', '2021-10-26 00:32:35', '2021-10-31 01:05:54'),
+(6, 'Gresik-Malteg', 'CITRA BORNEO MANDIRI, PT', 'Pemenang II', '11111111111111', '2021-10-10', '2021-10-28', '2021-11-06', '2021-10-27 14:59:34', '2021-10-30 21:11:31');
 
 -- --------------------------------------------------------
 
@@ -338,7 +410,7 @@ INSERT INTO `jasageneralcargo` (`id`, `kode_rute`, `nama_vendor`, `status_pemena
 
 CREATE TABLE `jasakapallayar` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `kode_rute` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `kode_rutes` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nama_vendor` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status_pemenang` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `kontrak` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -353,8 +425,8 @@ CREATE TABLE `jasakapallayar` (
 -- Dumping data untuk tabel `jasakapallayar`
 --
 
-INSERT INTO `jasakapallayar` (`id`, `kode_rute`, `nama_vendor`, `status_pemenang`, `kontrak`, `tgl_kontrak`, `mulai`, `akhir`, `created_at`, `updated_at`) VALUES
-(1, 'Lampung-Pangkal Pinang', 'PELAYARAN RAKYAT BONE JAYA BARU, PT', 'Pemenang I', '1111111111111', '2021-09-27', '2021-10-10', '2021-11-06', '2021-10-09 21:12:56', '2021-10-09 21:44:49');
+INSERT INTO `jasakapallayar` (`id`, `kode_rutes`, `nama_vendor`, `status_pemenang`, `kontrak`, `tgl_kontrak`, `mulai`, `akhir`, `created_at`, `updated_at`) VALUES
+(1, 'Lampung-Pangkal Pinang', 'PELAYARAN RAKYAT BONE JAYA BARU, PT', 'Pemenang I', '1111111111111', '2021-09-27', '2021-10-10', '2021-11-06', '2021-10-09 21:12:56', '2021-10-31 04:39:56');
 
 -- --------------------------------------------------------
 
@@ -382,17 +454,15 @@ CREATE TABLE `jasatimecharter` (
 --
 
 INSERT INTO `jasatimecharter` (`id`, `nama_angkutan`, `kelas_kapasitas`, `nama_vendor`, `tarif`, `kapasitas`, `kontrak`, `tgl_kontrak`, `mulai`, `akhir`, `created_at`, `updated_at`) VALUES
-(2, 'KM Anugerah Buana VI', '3000-3500', 'PT Kapuas Mekar Jaya', 123313, '3400', '3032/B/HK.01.02/35/SP/2019', '2021-09-28', '2021-10-07', '2021-10-28', '2021-10-04 19:38:14', '2021-10-05 01:26:59'),
+(2, 'KM Anugerah Buana VI', '3000-3500', 'PT Linc Bintang Line', 123, '3400', '3032/B/HK.01.02/35/SP/2019', '2021-09-28', '2021-10-07', '2021-11-02', '2021-10-04 19:38:14', '2021-10-31 01:08:38'),
 (3, '1', '3000-3500', 'PT Kapuas Mekar Jaya', 90, '3400', '3032/B/HK.01.02/35/SP/2019', '2021-10-01', '2021-10-01', '2021-10-21', '2021-10-04 19:43:10', '2021-10-04 20:16:27'),
 (4, '1', '3000-3500', 'PT Kapuas Mekar Jaya', 55555, '3400', '3032/B/HK.01.02/35/SP/2019', '2021-10-07', '2021-10-30', '2021-10-10', '2021-10-04 19:43:37', '2021-10-04 19:43:37'),
 (26, '1', '3000-3500', 'PT Kapuas Mekar Jaya', 518415000, '3400', '1404/HK.01.02/35/SP/2019', '2019-07-31', '2019-08-01', '2021-07-01', '2021-10-04 23:00:28', '2021-10-04 23:00:28'),
-(27, 'KM Anugerah Buana VI', '3000-3500', 'PT Linc Bintang Line', 222222, '3400', '3032/B/HK.01.02/35/SP/2019', '2021-10-06', '2021-10-16', '2021-11-06', '2021-10-04 23:23:55', '2021-10-26 01:15:58'),
-(28, 'KM Anugerah Buana VI', '3000-3500', 'PT Kapuas Mekar Jaya', 400000, '3400', '1010101', '2021-10-04', '2021-10-15', '2021-10-17', '2021-10-26 01:27:15', '2021-10-26 01:27:15'),
-(29, 'KM Anugerah Buana VI', '3000-3500', 'PT Kapuas Mekar Jaya', 400000, '3400', '1404/HK.01.02/35/SP/2019', '2021-08-29', '2021-10-20', '2021-10-30', '2021-10-26 18:56:03', '2021-10-26 19:00:47'),
+(27, 'KM Anugerah Buana VI', '3000-3500', 'PT Linc Bintang Line', 222222, '3400', '3032/B/HK.01.02/35/SP/2019', '2021-10-06', '2021-10-16', '2021-11-03', '2021-10-04 23:23:55', '2021-10-30 14:55:31'),
+(28, 'KM Anugerah Buana VI', '3000-3500', 'PT Kapuas Mekar Jaya', 400000, '3400', '1010101', '2021-10-04', '2021-10-15', '2021-10-28', '2021-10-26 01:27:15', '2021-10-30 14:56:09'),
 (30, 'KM Anugerah Buana VI', '3000-3500', 'PT Linc Bintang Line', 400000, '3400', '1404/HK.01.02/35/SP/2019', '2021-09-26', '2021-11-06', '2023-03-11', '2021-10-26 18:59:28', '2021-10-26 18:59:28'),
-(31, 'KM Anugerah Buana VI', '3000-3500', 'PT Kapuas Mekar Jaya', 123313, '3400', '22222222', '2021-10-01', '2021-10-18', '2022-11-05', '2021-10-27 05:33:52', '2021-10-27 05:33:52'),
-(32, 'KM Anugerah Buana VI', '3000-3500', 'PT Kapuas Mekar Jaya', 222222, '1111111', '0000000000', '2021-09-27', '2021-10-27', '2022-10-07', '2021-10-27 05:34:31', '2021-10-27 05:34:31'),
-(33, 'PT Kapuas Mekar Jaya', '3000-3500', 'PT Linc Bintang Line', 222222, '1111111', '999999999', '2021-09-26', '2021-10-26', '2021-10-24', '2021-10-27 05:36:05', '2021-10-27 05:36:05');
+(34, 'KM Anugerah Buana VI', '3000-3500', 'PT Kapuas Mekar Jaya', 400000, '1111111', '3032/B/HK.01.02/35/SP/2019', '2021-10-31', '2021-11-01', '2021-10-24', '2021-10-31 20:34:46', '2021-10-31 20:34:46'),
+(35, 'KM Anugerah Buana VI', '3000-3500', 'PT Kapuas Mekar Jaya', 400000, '3400', '22222222', '2021-11-01', '2021-11-10', '2021-10-17', '2021-10-31 20:50:20', '2021-10-31 20:50:20');
 
 -- --------------------------------------------------------
 
@@ -402,7 +472,7 @@ INSERT INTO `jasatimecharter` (`id`, `nama_angkutan`, `kelas_kapasitas`, `nama_v
 
 CREATE TABLE `jasavoyagecharter` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `kode_rute` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `kode_rutes` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nama_vendor` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status_pemenang` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `kontrak` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -417,19 +487,10 @@ CREATE TABLE `jasavoyagecharter` (
 -- Dumping data untuk tabel `jasavoyagecharter`
 --
 
-INSERT INTO `jasavoyagecharter` (`id`, `kode_rute`, `nama_vendor`, `status_pemenang`, `kontrak`, `tgl_kontrak`, `mulai`, `akhir`, `created_at`, `updated_at`) VALUES
-(19, 'Gresik-Banjarmasin', 'MANDIRI SEJAHTERA ABADI LINE, PT', 'Spot', '1010101', '2021-02-01', '2021-02-15', '2022-08-01', '2021-10-02 19:44:19', '2021-10-07 00:35:17'),
-(20, 'Gresik-Lhokseumawe', 'MANDIRI SEJAHTERA ABADI LINE, PT', 'Pemenang I', '3032/B/HK.01.02/35/SP/2019', '2021-09-01', '2021-09-16', '2023-04-06', '2021-10-02 19:44:19', '2021-10-02 19:44:19'),
-(21, 'Gresik-Lhokseumawe', 'MANDIRI SEJAHTERA ABADI LINE, PT', 'Pemenang III', '3032/B/HK.01.02/35/SP/2019', '2021-09-16', '2021-09-09', '2021-10-09', '2021-10-02 19:44:19', '2021-10-02 19:44:19'),
-(22, 'Gresik-Lhokseumawe', 'MANDIRI SEJAHTERA ABADI LINE, PT', 'Pemenang II - 80%', '3032/B/HK.01.02/35/SP/2019', '2021-09-01', '2021-10-08', '2021-11-06', '2021-10-02 19:44:19', '2021-10-02 19:44:19'),
-(25, 'Singkawang-Banjarmasin', 'MANDIRI SEJAHTERA ABADI LINE, PT', 'Pemenang I', '3032/B/HK.01.02/35/SP/2019', '2021-09-27', '2021-10-22', '2021-11-06', '2021-10-04 19:57:35', '2021-10-04 19:57:35'),
-(26, 'Gresik-Lhokseumawe', 'MANDIRI SEJAHTERA ABADI LINE, PT', 'Pemenang I', '555555555555', '2021-09-27', '2021-09-26', '2021-10-22', '2021-10-04 19:59:03', '2021-10-04 19:59:03'),
-(27, 'Gresik-Gorontalo', 'PT Perusahaan Pelnas Bandar Bahari Permai', 'Pemenang II', '3032/B/HK.01.02/35/SP/2019', '2021-09-27', '2021-10-28', '2021-11-06', '2021-10-25 22:09:12', '2021-10-26 01:07:44'),
-(28, 'Gresik-Gorontalo', 'PELAYARAN KAPUAS MEKAR JAYA, PT', 'Pemenang II', '3032/B/HK.01.02/35/SP/2019', '2021-10-04', '2021-10-15', '2021-11-06', '2021-10-26 15:32:31', '2021-10-26 15:32:31'),
-(29, 'Singkawang-Lombok', 'PT Berkah Samudra Line', 'Pemenang II', '3032/B/HK.01.02/35/SP/2019', '2021-09-26', '2021-10-14', '2021-11-06', '2021-10-26 19:57:44', '2021-10-26 19:57:44'),
-(30, 'Gresik-Banjarmasin', 'PT Berkah Samudra Line', 'Pemenang II', '3032/B/HK.01.02/35/SP/2019', '2021-10-01', '2021-10-27', '2022-03-27', '2021-10-27 05:31:06', '2021-10-27 05:31:06'),
-(31, 'Gresik-Bima', 'PT Berkah Samudra Line', 'Pemenang II', '555555555555', '2021-09-26', '2021-10-26', '2023-12-27', '2021-10-27 05:31:56', '2021-10-27 05:31:56'),
-(32, 'Gresik-Banjarmasin', 'PT  Mandiri Sejahtera Abadi Line', 'Pemenang I', '0000000000000', '2021-09-26', '2021-10-28', '2023-09-02', '2021-10-27 05:32:51', '2021-10-27 05:32:51');
+INSERT INTO `jasavoyagecharter` (`id`, `kode_rutes`, `nama_vendor`, `status_pemenang`, `kontrak`, `tgl_kontrak`, `mulai`, `akhir`, `created_at`, `updated_at`) VALUES
+(36, 'Gresik-Lhokseumawe', 'PT  Mandiri Sejahtera Abadi Line', 'Pemenang II', '1111111111111', '2021-10-03', '2021-10-29', '2023-02-11', '2021-10-27 14:52:00', '2021-10-30 16:17:40'),
+(45, 'Gresik-Banjarmasin', 'PT Berkah Samudra Line', 'Pemenang I', '1111111111111', '2021-10-03', '2021-10-28', '2021-10-28', '2021-10-27 15:12:05', '2021-10-30 16:18:53'),
+(46, 'Gresik-Bengkulu', 'PT  Intan Borneo Wisesa', 'Pemenang I', '090909090', '2021-09-27', '2021-10-01', '2021-10-25', '2021-10-30 16:17:10', '2021-10-30 16:17:10');
 
 -- --------------------------------------------------------
 
@@ -965,7 +1026,17 @@ INSERT INTO `kabupaten` (`id`, `nama_kabupaten`, `provinsi`, `keterangan`, `crea
 (512, 'Kabupaten Teluk Bintuni', 'Papua Barat', '-', '2021-10-26 18:45:18', '2021-10-26 18:45:18'),
 (513, 'Kabupaten Teluk Wondama', 'Papua Barat', '-', '2021-10-26 18:45:18', '2021-10-26 18:45:18'),
 (514, 'Kota Sorong', 'Papua Barat', '-', '2021-10-26 18:45:18', '2021-10-26 18:45:18'),
-(515, 'Kendari1', 'Jawa Timur', '-', '2021-10-26 19:10:22', '2021-10-26 19:10:22');
+(515, 'Kendari1', 'Jawa Timur', '-', '2021-10-26 19:10:22', '2021-10-26 19:10:22'),
+(516, 'Kota Pagatan  / Batulicin', 'Kalimantan Selatan', '-', '2021-10-28 00:40:44', '2021-10-28 00:40:44'),
+(517, 'Reo', 'NTT & NTB', '-', '2021-10-28 15:16:34', '2021-10-28 15:16:34'),
+(518, 'Attambua', 'NTT & NTB', '-', '2021-10-28 15:16:52', '2021-10-28 15:16:52'),
+(519, 'Waingapu/ Sumba Timur', 'NTT & NTB', '-', '2021-10-28 15:17:11', '2021-10-28 15:17:11'),
+(520, 'Waikabubak / Sumba Barat', 'NTT & NTB', '-', '2021-10-28 15:17:32', '2021-10-28 15:17:32'),
+(521, 'L. Banggai / Bunta', 'Sulawesi', '-', '2021-10-28 15:17:53', '2021-10-28 15:17:53'),
+(522, 'L. Banggai / Toili', 'Sulawesi', '-', '2021-10-28 15:18:13', '2021-10-28 15:18:13'),
+(523, 'Merauke I - Tanah Miring', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', '-', '2021-10-28 15:18:42', '2021-10-28 15:18:42'),
+(524, 'Merauke II - Kota', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', '-', '2021-10-28 15:19:00', '2021-10-28 15:19:00'),
+(525, 'Timika', 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', '-', '2021-10-28 15:19:32', '2021-10-28 15:19:32');
 
 -- --------------------------------------------------------
 
@@ -1096,7 +1167,12 @@ INSERT INTO `provinsi` (`id_prov`, `nama_provinsi`, `created_at`, `updated_at`) 
 (31, 'Sumatera Selatan', '2021-10-27 01:40:12', '2021-10-27 01:40:12'),
 (32, 'Sumatra Barat', '2021-10-27 01:40:12', '2021-10-27 01:40:12'),
 (33, 'Sumatra Utara', '2021-10-27 01:40:12', '2021-10-27 01:40:12'),
-(34, 'Yogyakarta', '2021-10-27 01:40:12', '2021-10-27 01:40:12');
+(34, 'Yogyakarta', '2021-10-27 01:40:12', '2021-10-27 01:40:12'),
+(35, 'Sumatra', '2021-10-28 15:13:57', '2021-10-28 15:13:57'),
+(36, 'Kalimantan', '2021-10-28 15:14:11', '2021-10-28 15:14:11'),
+(37, 'NTT & NTB', '2021-10-28 15:14:21', '2021-10-28 15:14:21'),
+(38, 'Sulawesi', '2021-10-28 15:14:45', '2021-10-28 15:14:45'),
+(39, 'Maluku, Maluku Utara, Irian Jaya, Irian Barat', '2021-10-28 15:15:21', '2021-10-28 15:15:21');
 
 -- --------------------------------------------------------
 
@@ -1106,7 +1182,7 @@ INSERT INTO `provinsi` (`id_prov`, `nama_provinsi`, `created_at`, `updated_at`) 
 
 CREATE TABLE `rekapalihstok` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `kode_rute` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `kode_rutes` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nama_vendor` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status_pemenang` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `kontrak` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1121,12 +1197,14 @@ CREATE TABLE `rekapalihstok` (
 -- Dumping data untuk tabel `rekapalihstok`
 --
 
-INSERT INTO `rekapalihstok` (`id`, `kode_rute`, `nama_vendor`, `status_pemenang`, `kontrak`, `tgl_kontrak`, `mulai`, `akhir`, `created_at`, `updated_at`) VALUES
+INSERT INTO `rekapalihstok` (`id`, `kode_rutes`, `nama_vendor`, `status_pemenang`, `kontrak`, `tgl_kontrak`, `mulai`, `akhir`, `created_at`, `updated_at`) VALUES
 (1, 'Gresik-Bitung', 'CITRA BORNEO MANDIRI, PT', 'Pemenang II', '555555555555', '2021-10-28', '2021-11-06', '2021-12-04', '2021-10-25 00:06:32', '2021-10-25 00:06:32'),
 (3, 'Gresik-Bitung', 'SINAR BAYU SEJAHTERA, PT', 'Pemenang II', '555555555555', '2021-09-27', '2021-10-06', '2021-11-06', '2021-10-25 18:30:13', '2021-10-25 18:30:13'),
 (4, 'Gresik-Bitung', 'SINAR BAYU SEJAHTERA, PT', 'Pemenang II', '555555555555', '2021-09-27', '2021-10-06', '2021-11-06', '2021-10-25 18:32:08', '2021-10-25 18:32:08'),
 (5, 'Gresik-Bitung', 'CITRA BORNEO MANDIRI, PT', 'Pemenang I', '3032/B/HK.01.02/35/SP/2019', '2021-10-03', '2021-10-27', '2021-11-06', '2021-10-26 19:27:16', '2021-10-26 19:27:16'),
-(6, 'Gresik-Bitung', 'CITRA BORNEO MANDIRI, PT', 'Pemenang I', '3032/B/HK.01.02/35/SP/2019', '2021-09-26', '2021-10-27', '2021-11-06', '2021-10-26 19:32:21', '2021-10-26 19:32:21');
+(6, 'Gresik-Bitung', 'CITRA BORNEO MANDIRI, PT', 'Pemenang I', '3032/B/HK.01.02/35/SP/2019', '2021-09-26', '2021-10-27', '2021-11-06', '2021-10-26 19:32:21', '2021-10-26 19:32:21'),
+(7, 'GPAceh-Gresik', 'CITRA BORNEO MANDIRI, PT', 'Pemenang II', '555555555555', '2021-10-31', '2021-11-09', '2022-04-01', '2021-10-31 18:59:33', '2021-10-31 18:59:33'),
+(8, 'GPAceh-Gresik', 'CITRA BORNEO MANDIRI, PT', 'Pemenang II', '1111111111111', '2021-11-08', '2021-11-25', '2022-06-01', '2021-10-31 19:00:30', '2021-10-31 19:00:30');
 
 -- --------------------------------------------------------
 
@@ -1136,7 +1214,7 @@ INSERT INTO `rekapalihstok` (`id`, `kode_rute`, `nama_vendor`, `status_pemenang`
 
 CREATE TABLE `rekaptaripfranco` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `kode_rute` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `kode_rutes` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nama_vendor` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status_pemenang` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `kontrak` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1151,7 +1229,7 @@ CREATE TABLE `rekaptaripfranco` (
 -- Dumping data untuk tabel `rekaptaripfranco`
 --
 
-INSERT INTO `rekaptaripfranco` (`id`, `kode_rute`, `nama_vendor`, `status_pemenang`, `kontrak`, `tgl_kontrak`, `mulai`, `akhir`, `created_at`, `updated_at`) VALUES
+INSERT INTO `rekaptaripfranco` (`id`, `kode_rutes`, `nama_vendor`, `status_pemenang`, `kontrak`, `tgl_kontrak`, `mulai`, `akhir`, `created_at`, `updated_at`) VALUES
 (1, 'Gresik-Bitung', 'SINAR BAYU SEJAHTERA, PT', 'Pemenang II', '555555555555', '2021-10-04', '2021-10-09', '2021-11-06', '2021-10-25 18:32:29', '2021-10-25 18:32:29'),
 (2, 'Gresik-Bitung', 'SINAR BAYU SEJAHTERA, PT', 'Pemenang I', '1111111111111', '2021-10-10', '2021-10-04', '2021-10-02', '2021-10-25 18:33:48', '2021-10-25 18:33:48'),
 (6, 'GPAceh-Gresik', 'SINAR BAYU SEJAHTERA, PT', 'Pemenang III', '3032/B/HK.01.02/35/SP/2019', '2021-09-26', '2021-10-29', '2021-12-11', '2021-10-26 19:16:38', '2021-10-26 19:16:38'),
@@ -1204,7 +1282,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'adminsar', 'admin@adminsar.com', NULL, '$2y$10$9l6H72NEyXckDTPhs6L8qeStZKqwmNG3k4YH1BquBmjUixnsPNCvK', 'rWAWxlJCqWK40Lcd5xyTa1bvClFfHZy996EZD4eNflUzly05n65YsA5kW2kw', '2021-09-27 00:34:03', '2021-09-27 00:34:03');
+(1, 'adminsar', 'admin@adminsar.com', NULL, '$2y$10$9l6H72NEyXckDTPhs6L8qeStZKqwmNG3k4YH1BquBmjUixnsPNCvK', 'r1UPSYvqlejFMltSygZRYG09ZJiIgOXD6qNd9BFl3ULin9ni6V9sn1rmniag', '2021-09-27 00:34:03', '2021-09-27 00:34:03');
 
 -- --------------------------------------------------------
 
@@ -1246,8 +1324,35 @@ CREATE TABLE `vendor_container` (
 --
 
 INSERT INTO `vendor_container` (`id_vendor`, `nama_vendor`, `keterangan_vendor`, `created_at`, `updated_at`) VALUES
-(1, 'KRIS CARGO BAHTERA, PT', 'KRIS CARGO BAHTERA, PT Keterangan', NULL, NULL),
-(4, 'CITRA BORNEO MANDIRI, PT', 'PT Linc Bintang Line k', '2021-10-24 23:49:54', '2021-10-24 23:49:54');
+(1, 'PT ANUGERAH JELAJAH INDONESIA LOGISTIC', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(2, 'PT ANUGERAH TRANS MARITIM', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(3, 'PT BHANDA GHARA REKSA (PERSERO)', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(4, 'PT CITRA NIAGA LOGISTIK', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(5, 'PT DINAMIKA EXPRESSINDO', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(6, 'PT DIRGANTARA SURYA PERSADA', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(7, 'PT HARINDRA SURYASEMPURNA', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(8, 'PT HERSINDO ANUGERAH MULTITRANS', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(9, 'PT JASA PRIMA LOGISTIK BULOG', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(10, 'PT KAMADJAJA LOGISTICS', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(11, 'PT KENDANG SARI UTAMA', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(12, 'PT KOPINDO CIPTA SEJAHTERA', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(13, 'PT KRIS CARGO BAHTERA', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(14, 'PT KURNIA JAYA BAHARI', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(15, 'PT LINTANG EMAS PASIFIK', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(16, 'PT LINTAS LAUT BIRU', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(17, 'PT LYONO TRANSPORTASI LOGISTIK', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(18, 'PT MARAJASA TRANSPORTAMA', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(19, 'PT MITRA INTERTRANS FORWARDING', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(20, 'PT PULAU LAUT LINE', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(21, 'PT PUPUK INDONESIA LOGISTIK', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(22, 'PT PUTERA UTAMA LAUTAN', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(23, 'PT PUTRA JAYA MARINE LOGISTICS', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(24, 'PT SAHABAT MARINE LOGISTICS', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(25, 'PT SINAR BAYU SEJAHTERA', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(26, 'PT SUKOHARJO PERMAI ', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(27, 'PT SUN RISE LOGISTICS', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(28, 'PT SURYA BUANA SENTOSA', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05'),
+(29, 'PT TPIL LOGISTICS', '-', '2021-10-28 15:38:05', '2021-10-28 15:38:05');
 
 -- --------------------------------------------------------
 
@@ -1268,8 +1373,24 @@ CREATE TABLE `vendor_generalcargo` (
 --
 
 INSERT INTO `vendor_generalcargo` (`id_vendor`, `nama_vendor`, `keterangan_vendor`, `created_at`, `updated_at`) VALUES
-(1, 'PT. CITRA BORNEO MANDIRI', 'PT. CITRA BORNEO MANDIRI Keteran', NULL, '2021-10-09 14:20:27'),
-(2, 'CITRA BORNEO MANDIRI, PT', 'CITRA BORNEO MANDIRI, PT keteranganns', '2021-10-07 01:23:25', '2021-10-07 01:35:54');
+(1, 'PT Berkah Samudra Line', '-', '2021-10-30 23:19:19', '2021-10-31 01:01:25'),
+(2, 'PT  Intan Borneo Wisesa', '-', '2021-10-30 23:19:19', '2021-10-30 23:19:19'),
+(3, 'PT  Mandiri Sejahtera Abadi Line', '-', '2021-10-30 23:19:19', '2021-10-30 23:19:19'),
+(4, 'PT Pelayaran Cahaya Lintang Samudera', '-', '2021-10-30 23:19:19', '2021-10-30 23:19:19'),
+(5, 'PT Pelayaran Kapuas Mekar Jaya ', '-', '2021-10-30 23:19:19', '2021-10-30 23:19:19'),
+(6, 'PT Pelayaran Sahabat Karya Abadi', '-', '2021-10-30 23:19:19', '2021-10-30 23:19:19'),
+(9, 'PT Pelayaran Surya Bintang Timur', '-', '2021-10-30 23:19:19', '2021-10-30 23:19:19'),
+(10, 'PT Ppn Bandar Bahari Permai', '-', '2021-10-30 23:19:19', '2021-10-30 23:19:19'),
+(11, 'PT Isa Lines', '-', '2021-10-30 23:19:19', '2021-10-30 23:19:19'),
+(12, 'PT Kopindo Cipta Sejahtera', '-', '2021-10-30 23:19:19', '2021-10-30 23:19:19'),
+(13, 'PT Pelayaran Berkah Setanggi Timur', '-', '2021-10-30 23:19:19', '2021-10-30 23:19:19'),
+(14, 'PT Pelayaran Niaga Sukses Bersama', '-', '2021-10-30 23:19:19', '2021-10-30 23:19:19'),
+(15, 'PT Perusahaan Pelayaran Gurita Lintas Samudera', '-', '2021-10-30 23:19:19', '2021-10-30 23:19:19'),
+(16, 'PT Perusahaan Pelnas Bandar Bahari Permai', '-', '2021-10-30 23:19:19', '2021-10-30 23:19:19'),
+(17, 'PT Pupuk Indonesia Logistik', '-', '2021-10-30 23:19:19', '2021-10-30 23:19:19'),
+(18, 'PT Sahabat Karya Abadi Line', '-', '2021-10-30 23:19:19', '2021-10-30 23:19:19'),
+(19, 'PT Samudra Usaha Jaya Line', '-', '2021-10-30 23:19:19', '2021-10-30 23:19:19'),
+(20, 'PT Varia Usaha Lintas Segara', '-', '2021-10-30 23:19:19', '2021-10-30 23:19:19');
 
 -- --------------------------------------------------------
 
@@ -1356,7 +1477,7 @@ CREATE TABLE `vendor_voyage` (
 --
 
 INSERT INTO `vendor_voyage` (`id_vendor`, `nama_vendor`, `keterangan_vendor`, `created_at`, `updated_at`) VALUES
-('1', 'PT Berkah Samudra Line', '-', '2021-10-26 17:31:57', '2021-10-26 17:31:57'),
+('1', 'PT Berkah Samudra Line', '-', '2021-10-26 17:31:57', '2021-10-27 17:23:52'),
 ('2', 'PT  Intan Borneo Wisesa', '-', '2021-10-26 17:31:57', '2021-10-26 17:31:57'),
 ('3', 'PT  Mandiri Sejahtera Abadi Line', '-', '2021-10-26 17:31:57', '2021-10-26 17:31:57'),
 ('4', 'PT Pelayaran Cahaya Lintang Samudera', '-', '2021-10-26 17:31:57', '2021-10-26 17:31:57'),
@@ -1562,13 +1683,13 @@ ALTER TABLE `angkutan_time`
 -- AUTO_INCREMENT untuk tabel `gudang_petroganik`
 --
 ALTER TABLE `gudang_petroganik`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT untuk tabel `gudang_pkg`
 --
 ALTER TABLE `gudang_pkg`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `jasacontainer`
@@ -1580,7 +1701,7 @@ ALTER TABLE `jasacontainer`
 -- AUTO_INCREMENT untuk tabel `jasageneralcargo`
 --
 ALTER TABLE `jasageneralcargo`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `jasakapallayar`
@@ -1592,19 +1713,19 @@ ALTER TABLE `jasakapallayar`
 -- AUTO_INCREMENT untuk tabel `jasatimecharter`
 --
 ALTER TABLE `jasatimecharter`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT untuk tabel `jasavoyagecharter`
 --
 ALTER TABLE `jasavoyagecharter`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT untuk tabel `kabupaten`
 --
 ALTER TABLE `kabupaten`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=516;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=526;
 
 --
 -- AUTO_INCREMENT untuk tabel `kelas_kapasitas_time`
@@ -1622,13 +1743,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT untuk tabel `provinsi`
 --
 ALTER TABLE `provinsi`
-  MODIFY `id_prov` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id_prov` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT untuk tabel `rekapalihstok`
 --
 ALTER TABLE `rekapalihstok`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `rekaptaripfranco`
@@ -1658,13 +1779,13 @@ ALTER TABLE `vendor_alihstok`
 -- AUTO_INCREMENT untuk tabel `vendor_container`
 --
 ALTER TABLE `vendor_container`
-  MODIFY `id_vendor` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_vendor` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT untuk tabel `vendor_generalcargo`
 --
 ALTER TABLE `vendor_generalcargo`
-  MODIFY `id_vendor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_vendor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT untuk tabel `vendor_kapallayar`

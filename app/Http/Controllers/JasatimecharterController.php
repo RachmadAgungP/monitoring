@@ -92,7 +92,6 @@ class JasatimecharterController extends Controller
     {
        
         $request->validate([
-            'id'=> 'required',
             'nama_angkutan'=> 'required',
             'nama_vendor' => 'required',
             'kelas_kapasitas' => 'required',
@@ -172,16 +171,10 @@ class JasatimecharterController extends Controller
 
     public function importDataJasatimeCharter(Request $request)
     {
-        // return  dd($request->all());
         $file = $request->file('jasa-time-charter');
         $namaFile = $file->getClientOriginalName();
         $file->move('datajasatimecharter', $namaFile);
-        // // dd($file);
-        // return dd($file);
         \Excel::import(new JasatimecharterImport, public_path('datajasatimecharter/' . $namaFile));
-
-
-
         return redirect('/jasa-time-charter')->with('success', 'All good!');
     }
 }
