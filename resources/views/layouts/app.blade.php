@@ -73,7 +73,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/jasa-ppmemkl-inbag">JASA PPM/EMKL In Bag</a>
-                                <a class="dropdown-item" href="/rekap-tarip-franco">Rekap Trip Franco</a>
+                                <a class="dropdown-item" href="/jasa-ppmemkl-curah">JASA PPM/EMKL Curah</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">

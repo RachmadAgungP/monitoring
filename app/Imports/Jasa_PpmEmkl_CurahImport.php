@@ -2,10 +2,10 @@
 
 namespace App\Imports;
 
-use App\Jasa_PpmEmkl_InBAG;
+use App\Jasa_PpmEmkl_Curah;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
-class Jasa_PpmEmkl_InBAGImport implements ToModel,WithHeadingRow
+class Jasa_PpmEmkl_CurahImport implements ToModel,WithHeadingRow
 {
     /**
     * @param array $row
@@ -14,8 +14,8 @@ class Jasa_PpmEmkl_InBAGImport implements ToModel,WithHeadingRow
     */
     public function model(array $row)
     {
-        return new Jasa_PpmEmkl_InBAG([
-        'tujuan' => $row['tujuan'],
+        return new Jasa_PpmEmkl_Curah([
+            'tujuan' => $row['tujuan'],
         'wilayah' => $row['wilayah'],
         'tarif_PBM' => $row['tarif_PBM'],
         'tarif_EMKL' => $row['tarif_EMKL'],

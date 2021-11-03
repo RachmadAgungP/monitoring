@@ -156,3 +156,13 @@ Route::get('/vendor-Inbag/json', 'Vendor_InBAGController@json');
 
 Route::resource('/jasa-ppmemkl-inbag','JasaPpmEmklInBAGController');
 Route::resource('/vendor-Inbag', 'Vendor_InBAGController');
+
+// Jasa In Curah
+Route::post('/import-jasa-ppmemkl-curah', 'JasaPpmEmklCurahController@importDataJasacurah')->name('importDataJasacurah');
+Route::post('/import-vendor-Curah', 'Vendor_CurahController@importDataVendor_curah')->name('importDataVendor_curah');
+
+Route::get('/jasa-ppmemkl-curah/json','JasaPpmEmklCurahController@json');
+Route::get('/vendor-Curah/json', 'Vendor_CurahController@json');
+
+Route::resource('/jasa-ppmemkl-curah','JasaPpmEmklCurahController');
+Route::resource('/vendor-Curah', 'Vendor_CurahController');

@@ -4,8 +4,8 @@ namespace App\Imports;
 
 use App\Jasacontainer;
 use Maatwebsite\Excel\Concerns\ToModel;
-
-class JasacontainerImport implements ToModel
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
+class JasacontainerImport implements ToModel,WithHeadingRow
 {
     /**
     * @param array $row

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','vendor Jasa ppm/emkl In Bag')
+@section('title','vendor Jasa ppm/emkl Curah')
 @section('content')
 <div class="container">
     <div class="justify-content-center">
@@ -17,7 +17,7 @@
             <div class="modal-dialog modal-lg">
               <form method="post" id="form-import" action="{{route('importdatavendorvoyage')}}" enctype="multipart/form-data" class="modal-content">
                 <div class="modal-header">
-                  <h4 class="modal-title">Import Data vendor Jasa ppm/emkl In Bag nama file harus sama</h4>
+                  <h4 class="modal-title">Import Data vendor Jasa ppm/emkl Curah nama file harus sama</h4>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -26,10 +26,10 @@
                   {{csrf_field()}}
                   <div class="row">
                     <div class="col-md-12">
-                      <p>Import data vendor Jasa ppm/emkl In Bag sesuai format contoh berikut.<br /><a href="{{url('')}}/vendor-Inbag.xlsx"><i class="fas fa-download"></i> File Contoh Excel vendor Jasa ppm/emkl In Bag</a></p>
+                      <p>Import data vendor Jasa ppm/emkl Curah sesuai format contoh berikut.<br /><a href="{{url('')}}/vendor-Inbag.xlsx"><i class="fas fa-download"></i> File Contoh Excel vendor Jasa ppm/emkl Curah</a></p>
                     </div>
                     <div class="col-md-12">
-                      <label>File Excel vendor Jasa ppm/emkl In Bag</label>
+                      <label>File Excel vendor Jasa ppm/emkl Curah</label>
                       <input type="file" name="vendor-Inbag" required>
                     </div>
                   </div>

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','Jasa PPM/EMKL in Bag ')
+@section('title','Jasa PPM/EMKL Curah ')
 @section('content')
 <div class="container">
   <div class="justify-content-center">
@@ -14,13 +14,13 @@
           </div>
           @endif
 
-          <a href="/jasa-ppmemkl-inbag/create" class="btn btn-danger btn-sm">Input Data Baru </a>
+          <a href="/jasa-ppmemkl-curah/create" class="btn btn-danger btn-sm">Input Data Baru </a>
           <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modal-import">Import data Excel</button>
           <div class="modal fade" id="modal-import">
             <div class="modal-dialog modal-lg">
-              <form method="post" id="form-import" action="{{route('importDataJasainbag')}}" enctype="multipart/form-data" class="modal-content">
+              <form method="post" id="form-import" action="{{route('importDataJasacurah')}}" enctype="multipart/form-data" class="modal-content">
                 <div class="modal-header">
-                  <h4 class="modal-title">Import Data Jasa PPM/EMKL in Bag nama file harus sama</h4>
+                  <h4 class="modal-title">Import Data Jasa PPM/EMKL Curah nama file harus sama</h4>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -29,11 +29,11 @@
                   {{csrf_field()}}
                   <div class="row">
                     <div class="col-md-12">
-                      <p>Import data Jasa PPM/EMKL in Bag sesuai format contoh berikut.<br /><a href="{{url('')}}/jasa-ppmemkl-inbag.xlsx"><i class="fas fa-download"></i> File Contoh Excel Jasa PPM/EMKL in Bag </a></p>
+                      <p>Import data Jasa PPM/EMKL Curah sesuai format contoh berikut.<br /><a href="{{url('')}}/jasa-ppmemkl-curah.xlsx"><i class="fas fa-download"></i> File Contoh Excel Jasa PPM/EMKL Curah </a></p>
                     </div>
                     <div class="col-md-12">
-                      <label>File Excel Jasa PPM/EMKL in Bag </label>
-                      <input type="file" name="jasa-ppmemkl-inbag" required>
+                      <label>File Excel Jasa PPM/EMKL Curah </label>
+                      <input type="file" name="jasa-ppmemkl-curah" required>
                     </div>
                   </div>
                 </div>
@@ -45,7 +45,7 @@
             </div>
           </div>
           <a class="btn btn-primary btn-sm" href="/kabupaten">Tujuan (Kabupaten)</a>
-          <a class="btn btn-primary btn-sm" href="/vendor-Inbag">VENDOR PPM/EMKL In Bag</a>
+          <a class="btn btn-primary btn-sm" href="/vendor-Curah">VENDOR PPM/EMKL Curah</a>
           <hr>
           <div>
             <div>
@@ -118,7 +118,7 @@
     "scrollX": true,
     ajax: {
 
-      url: "/jasa-ppmemkl-inbag/json",
+      url: "/jasa-ppmemkl-curah/json",
       // type:"POST"
       data: function(d) {
         d.statuscategorys = statuscategorys;
