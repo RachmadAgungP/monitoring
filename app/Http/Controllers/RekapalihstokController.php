@@ -30,13 +30,13 @@ class RekapalihstokController extends Controller
         }
         return Datatables::of($data['rekapalihstoks'])
         ->addColumn('status', function ($row){
-            $diff  = date_diff( date_create($row->akhir), date_create() );
+            $diff  = date_diff(  date_create(),date_create($row->akhir) );
             $status = $diff->format('%r%a hari');
             return $status;
         })
 
         ->addColumn('statuscategory', function ($row) {
-            $diff  = date_diff(date_create(), date_create($row->akhir));
+            $diff  = date_diff(date_create(),date_create($row->akhir));
             $statushari = (int)$diff->format('%r%a');
             $statuscategory = data_tglfilters($statushari);
             return $statuscategory;

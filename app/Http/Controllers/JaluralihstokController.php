@@ -9,7 +9,7 @@ use App\Gudangpetroganik;
 
 use App\Imports\JaluralihstokImport;
 use App\Provinsi;
-
+include(app_path() . '/Http/Controllers/charters_filter.php');
 class JaluralihstokController extends Controller
 {
     function json(){
@@ -72,8 +72,6 @@ class JaluralihstokController extends Controller
      */
     public function store(Request $request)
     {
-        // $asal = $request->get('asal');
-        // $tujuan = $request->get('tujuan');
         $request->validate([
             // 'kode_rute' => 'required|unique:jalur_container|min:4',
             'tarif'=> 'required',
@@ -113,6 +111,13 @@ class JaluralihstokController extends Controller
         $data['wilayah'] = Provinsi::pluck('nama_provinsi','nama_provinsi');
 
         $data['jalur_alihstok'] = Jaluralihstok::where('kode_rute',$id)->first();
+        
+        $datas = select_jenisGudang($data['jalur_alihstok']);
+        $data['asal'] = $datas['asal'];
+        $data['tujuan'] = $datas['tujuan'];
+        $data['val_asal'] = $datas['val_asal'];
+        $data['val_tujuan'] = $datas['val_tujuan'];
+
         return view('rekapalihstok.jaluralihstok.edit',$data);
     }
 

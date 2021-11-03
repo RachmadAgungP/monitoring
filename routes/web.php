@@ -139,3 +139,20 @@ Route::resource('/vendor-taripfranco', 'VendortaripfrancoController');
 Route::post('/import-kabupaten','KabupatenController@importDataKabupaten')->name('importDataKabupaten');
 Route::get('/kabupaten/json', 'KabupatenController@json');
 Route::resource('/kabupaten', 'KabupatenController');
+
+// JASA GUDANG PENYANGGA
+Route::post('/import-gudang-penyangga','GudangPenyanggaController@importDataGudangpenyangga')->name('importDataGudangpenyangga');
+
+Route::get('/gudang-penyangga/json', 'GudangPenyanggaController@json');
+
+Route::resource('/gudang-penyangga', 'GudangPenyanggaController');
+
+// Jasa In Bag
+Route::post('/import-jasa-ppmemkl-inbag', 'JasaPpmEmklInBAGController@importDataJasainbag')->name('importDataJasainbag');
+Route::post('/import-vendor-Inbag', 'Vendor_InBAGController@importDataVendor_inbag')->name('importDataVendor_inbag');
+
+Route::get('/jasa-ppmemkl-inbag/json','JasaPpmEmklInBAGController@json');
+Route::get('/vendor-Inbag/json', 'Vendor_InBAGController@json');
+
+Route::resource('/jasa-ppmemkl-inbag','JasaPpmEmklInBAGController');
+Route::resource('/vendor-Inbag', 'Vendor_InBAGController');

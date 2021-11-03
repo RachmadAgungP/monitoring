@@ -6,12 +6,12 @@
         
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Input data Gudang Penyangga</div>
+                <div class="card-header">Input data Gudang Petroganik</div>
                 <div class="card-body">
                     {{ Form::open(['url'=>'gudang-penyangga']) }}
                         @csrf
-
-                        @include('gudangpenyangga.form')
+                        
+                        @include('gudangpetroganik.form')
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-2">
                             {{ Form::submit('Simpan Data',['class'=>'btn btn-primary btn-sm'])}}

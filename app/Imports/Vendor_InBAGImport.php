@@ -2,11 +2,11 @@
 
 namespace App\Imports;
 
-use App\Vendoralihstok;
+use App\Vendor_InBAG;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-class VendoralihstokImport implements ToModel,WithHeadingRow
+class Vendor_InBAGImport implements ToModel,WithHeadingRow
 {
     /**
     * @param array $row
@@ -15,7 +15,7 @@ class VendoralihstokImport implements ToModel,WithHeadingRow
     */
     public function model(array $row)
     {
-        return new Vendoralihstok([
+        return new Vendor_InBAG([
             'id_vendor' => $row['id_vendor'],
             'nama_vendor' => $row['nama_vendor'], 
             'keterangan_vendor' => $row['keterangan_vendor'],

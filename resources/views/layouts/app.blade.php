@@ -69,6 +69,15 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-cogs"></i> JASA PPM/EMKL
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/jasa-ppmemkl-inbag">JASA PPM/EMKL In Bag</a>
+                                <a class="dropdown-item" href="/rekap-tarip-franco">Rekap Trip Franco</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-cogs"></i> AS & Franco
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -83,7 +92,8 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/gudang-pkg">Gudang PKG</a>
-                                <!-- <a class="dropdown-item" href="/gudang-petroganik">Gudang Petrorganik</a> -->
+                                <a class="dropdown-item" href="/gudang-petroganik">Gudang Petrorganik</a>
+                                <a class="dropdown-item" href="/gudang-penyangga">Gudang Penyangga</a>
                             </div>
                         </li>
 

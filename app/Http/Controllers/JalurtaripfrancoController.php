@@ -11,7 +11,7 @@ use App\Provinsi;
 
 use App\Imports\JalurtaripfrancoImport;
 use App\Kabupaten;
-
+include(app_path() . '/Http/Controllers/charters_filter.php');
 class JalurtaripfrancoController extends Controller
 {
     function json(){
@@ -78,7 +78,6 @@ class JalurtaripfrancoController extends Controller
             // 'kode_rute' => 'required|unique:jalur_container|min:4',
             'tarif'=> 'required',
             'wilayah'=> 'required',
-            // 'jenis_gudang'=> 'required',
             'asal'=> 'required',
             'tujuan'=> 'required',
 
@@ -111,7 +110,11 @@ class JalurtaripfrancoController extends Controller
         $data['asal'] = GudangPKG::pluck('lokasi_gudang','lokasi_gudang');
         $data['tujuan'] = Kabupaten::pluck('nama_kabupaten','nama_kabupaten');
         $data['provinsi'] = Provinsi::pluck('nama_provinsi','nama_provinsi');
+
         $data['jalur_taripfranco'] = Jalurtaripfranco::where('kode_rute',$id)->first();
+        $datas = select_jenisGudang($data['jalur_taripfranco']);
+        $data['asal'] = $datas['asal'];
+        $data['val_asal'] = $datas['val_asal'];
         return view('rekaptaripfranco.jalurtaripfranco.edit',$data);
     }
 

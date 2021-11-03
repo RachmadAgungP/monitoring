@@ -2,20 +2,21 @@
 
 namespace App\Imports;
 
-use App\Gudangpetroganik;
+use App\GudangPenyangga;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-class GudangpetroganikImport implements ToModel, WithHeadingRow
+class GudangPenyanggaImport implements ToModel, WithHeadingRow
+
 {
     /**
-     * @param array $row
-     *
-     * @return \Illuminate\Database\Eloquent\Model|null
-     */
+    * @param array $row
+    *
+    * @return \Illuminate\Database\Eloquent\Model|null
+    */
     public function model(array $row)
     {
-        return new Gudangpetroganik([
+        return new GudangPenyangga([
             'id' => $row['id'],
             'nama_rekanan' => $row['nama_rekanan'],
             'lokasi_gudang' => $row['lokasi_gudang'],
