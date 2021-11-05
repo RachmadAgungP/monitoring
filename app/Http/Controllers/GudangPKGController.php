@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use DataTables;
 use Illuminate\Http\Request;
 use App\GudangPKG;
+use App\GudangPenyangga;
 use App\StatusPemenang;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Provinsi;
@@ -16,9 +17,8 @@ class GudangPKGController extends Controller
 {
     function json(Request $request)
     {
-
         $data['gudangpkg'] = \DB::table('gudang_pkg')
-            // ->join('jalur_container','jalur_container.kode_rute','=','gudangpkg.kode_rute')
+            ->join('gudang_penyangga','gudang_penyangga.lokasi_gudang','=','gudang_pkg.lokasi_gudangs')
             // ->join('kelas_kapasitas_time','id_kelas_kapasitas','=','gudangpkg.id_kelas_kapasitas')
             // ->join('vendor_time','nama_vendor','=','gudangpkg.nama_vendor')
 
@@ -43,8 +43,8 @@ class GudangPKGController extends Controller
             return $statuscategory;
         })
             ->addColumn('action', function ($row) {
-                $action = '<a href= "/gudang-pkg/' . $row->id . '/edit" class="btn btn-primary btn-sm"><i class= "fas fa-pencil-alt"></i> Edit</a>';
-                $action .= \Form::open(['url' => 'gudang-pkg/' . $row->id, 'method' => 'delete', 'style' => 'float:right']);
+                $action = '<a href= "/gudang-pkg/' . $row->ids . '/edit" class="btn btn-primary btn-sm"><i class= "fas fa-pencil-alt"></i> Edit</a>';
+                $action .= \Form::open(['url' => 'gudang-pkg/' . $row->ids, 'method' => 'delete', 'style' => 'float:right']);
                 $action .= "<button type='submit'class='btn btn-danger btn-sm'><i class='fas fa-trash-alt'></i> Hapus</button>";
                 $action .= \Form::Close();
 
@@ -74,7 +74,7 @@ class GudangPKGController extends Controller
     public function create()
     {
         // $data['jalur_container'] = Jalurcontainer::pluck('kode_rute','kode_rute');
-        // $data['vendor_container'] = Vendorcontainer::pluck('nama_vendor','nama_vendor');
+        $data['gudang_penyangga'] = GudangPenyangga::pluck('lokasi_gudang','lokasi_gudang');
         $data['provinsi'] = Provinsi::pluck('nama_provinsi', 'nama_provinsi');
         return view('gudangpkg.create', $data);
     }
@@ -88,11 +88,8 @@ class GudangPKGController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-        'id' => 'required',
-        'lokasi_gudang' => 'required',
-        'alamat_gudang'=> 'required',
-        'provinsi'=> 'required',
-        'nama_rekanan'=> 'required',
+        'ids' => 'required',
+        'lokasi_gudangs'=> 'required',
         'kap_GP_Ton'=> 'required',
         'Kapasitas_Anper_Lain'=> 'required',
         'sewa_Gudang_(Rp/bulan)'=> 'required',
@@ -119,7 +116,7 @@ class GudangPKGController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($ids)
     {
         //
     }
@@ -136,8 +133,10 @@ class GudangPKGController extends Controller
         // $data['vendor_container'] = Vendorcontainer::pluck('nama_vendor','nama_vendor');
 
         // $data['statuspemenang'] = StatusPemenang::pluck('nama_provinsi','nama_provinsi');
+        $data['gudang_penyangga'] = GudangPenyangga::pluck('lokasi_gudang','lokasi_gudang');
+
         $data['provinsi'] = Provinsi::pluck('nama_provinsi', 'nama_provinsi');
-        $data['gudangpkg'] = GudangPKG::where('id', $id)->first();
+        $data['gudangpkg'] = GudangPKG::where('ids', $id)->first();
 
         return view('gudangpkg.edit', $data);
     }
@@ -152,10 +151,7 @@ class GudangPKGController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'lokasi_gudang' => 'required',
-            'alamat_gudang'=> 'required',
-            'provinsi'=> 'required',
-            'nama_rekanan'=> 'required',
+            'lokasi_gudangs' => 'required',
             'nomor_surat'=> 'required',
             'tgl_kontrak'=> 'required',
             'mulai'=> 'required',
@@ -164,7 +160,7 @@ class GudangPKGController extends Controller
             'keterangan'=> 'required',
             ]);
 
-        $gudangpkg =  GudangPKG::where('id', '=', $id);
+        $gudangpkg =  GudangPKG::where('ids', '=', $id);
         $gudangpkg->update($request->except('_method', '_token'));
         return redirect("/gudang-pkg");
     }
@@ -177,7 +173,7 @@ class GudangPKGController extends Controller
      */
     public function destroy($id)
     {
-        $gudangpkg = GudangPKG::where('id', '=', $id);
+        $gudangpkg = GudangPKG::where('ids', '=', $id);
         $gudangpkg->delete();
         return redirect("/gudang-pkg");
     }

@@ -165,14 +165,14 @@
         "targets": 0,
         "class": "text-nowrap",
         "render": function(data, type, row, meta) {
-          return row.id;
+          return row.ids;
         }
       },
       {
         "targets": 1,
         "class": "text-nowrap",
         "render": function(data, type, row, meta) {
-          return row.lokasi_gudang;
+          return row.lokasi_gudangs;
         }
       },
       {
@@ -193,7 +193,7 @@
         "targets": 4,
         "class": "text-nowrap",
         "render": function(data, type, row, meta) {
-          return row.nama_rekanan;
+          return row.lokasi_gudangs;
         }
       },
       {

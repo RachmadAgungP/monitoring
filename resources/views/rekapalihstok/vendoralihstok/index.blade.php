@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','vendor container')
+@section('title','vendor Alih Stok')
 @section('content')
 <div class="container">
     <div class="justify-content-center">
@@ -15,9 +15,9 @@
                     <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modal-import">Import data Excel</button>
           <div class="modal fade" id="modal-import">
             <div class="modal-dialog modal-lg">
-              <form method="post" id="form-import" action="{{route('importdatavendorcontainer')}}" enctype="multipart/form-data" class="modal-content">
+              <form method="post" id="form-import" action="{{route('importdatavendoralihstok')}}" enctype="multipart/form-data" class="modal-content">
                 <div class="modal-header">
-                  <h4 class="modal-title">Import Data vendor container nama file harus sama</h4>
+                  <h4 class="modal-title">Import Data vendor Alih Stok nama file harus sama</h4>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -26,10 +26,10 @@
                   {{csrf_field()}}
                   <div class="row">
                     <div class="col-md-12">
-                      <p>Import data vendor container sesuai format contoh berikut.<br /><a href="{{url('')}}/vendor-alihstok.xlsx"><i class="fas fa-download"></i> File Contoh Excel vendor container</a></p>
+                      <p>Import data vendor Alih Stok sesuai format contoh berikut.<br /><a href="{{url('')}}/vendor-alihstok.xlsx"><i class="fas fa-download"></i> File Contoh Excel vendor Alih Stok</a></p>
                     </div>
                     <div class="col-md-12">
-                      <label>File Excel vendor container</label>
+                      <label>File Excel vendor Alih Stok</label>
                       <input type="file" name="vendor-alihstok" required>
                     </div>
                   </div>

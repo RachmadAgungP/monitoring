@@ -9,7 +9,7 @@
                 <div class="card-body">
                 @include('validation_error')
 
-                    {{ Form::model($gudangpkg,['url'=>'gudang-pkg/'.$gudangpkg->id,'method'=>'PUT']) }}
+                    {{ Form::model($gudangpkg,['url'=>'gudang-pkg/'.$gudangpkg->ids,'method'=>'PUT']) }}
             
                         @csrf
                         

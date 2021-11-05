@@ -4,14 +4,14 @@
 <div class="container">
     <div class="justify-content-center">
         <div class="col-md-14">
-        <a href="/jasa-ppmemkl-inbag" class="btn btn-primary btn-sm">Kembali </a> 
+        <a href="/jasa-ppmemkl-curah" class="btn btn-primary btn-sm">Kembali </a> 
         <hr> 
             <div class="card">
                 <div class="card-header">@yield('title')</div>
                 
                 <div class="card-body">
                    
-                    <a href="/vendor-Inbag/create" class = "btn btn-danger btn-sm">Input Data Baru </a>
+                    <a href="/vendor-Curah/create" class = "btn btn-danger btn-sm">Input Data Baru </a>
                     <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modal-import">Import data Excel</button>
           <div class="modal fade" id="modal-import">
             <div class="modal-dialog modal-lg">
@@ -26,11 +26,11 @@
                   {{csrf_field()}}
                   <div class="row">
                     <div class="col-md-12">
-                      <p>Import data vendor Jasa ppm/emkl Curah sesuai format contoh berikut.<br /><a href="{{url('')}}/vendor-Inbag.xlsx"><i class="fas fa-download"></i> File Contoh Excel vendor Jasa ppm/emkl Curah</a></p>
+                      <p>Import data vendor Jasa ppm/emkl Curah sesuai format contoh berikut.<br /><a href="{{url('')}}/vendor-Curah.xlsx"><i class="fas fa-download"></i> File Contoh Excel vendor Jasa ppm/emkl Curah</a></p>
                     </div>
                     <div class="col-md-12">
                       <label>File Excel vendor Jasa ppm/emkl Curah</label>
-                      <input type="file" name="vendor-Inbag" required>
+                      <input type="file" name="vendor-Curah" required>
                     </div>
                   </div>
                 </div>
@@ -71,7 +71,7 @@ $(function() {
             serverSide: true,
         "scrollY": 200,
         "scrollX": true,
-        ajax: '/vendor-Inbag/json',
+        ajax: '/vendor-Curah/json',
         columns: [
             { data: 'id', name: 'id' },
             { data: 'nama_vendor', name: 'nama_vendor' },

@@ -21,7 +21,7 @@
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label text-md-right">Jenis Gudang Asal</label>
                         <div class="col-md-6">
-                            {{Form::select('jenisgudanga',array('0'=> 'Pilih Jenis Gudang','1' => 'Gudang PKG', '2' => 'Gudang Petroganik'),null,['class'=>'from-control asalfilter','id'=>'asalfilters'])}}
+                            {{Form::select('jenisgudanga',array('0'=> 'Pilih Jenis Gudang','1' => 'Gudang Penyangga', '2' => 'Gudang Petroganik'),null,['class'=>'from-control asalfilter','id'=>'asalfilters'])}}
                         </div>
                     </div>
 

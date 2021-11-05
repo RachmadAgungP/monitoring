@@ -60,6 +60,9 @@ class HomeController extends Controller
         $data['jasa_ppmemkl_inbag'] = \DB::table('jasa_ppmemkl_inbag')
         ->get();
 
+        $data['jasa_ppmemkl_curah'] = \DB::table('jasa_ppmemkl_curah')
+        ->get();
+
         $data_voyage1 = data_filter($data['jasavoyagecharter'], '1');
         $data_voyage2 = data_filter($data['jasavoyagecharter'], '2');
         $data_voyage3 = data_filter($data['jasavoyagecharter'], '3');
@@ -102,7 +105,6 @@ class HomeController extends Controller
         $data_gudangpkg5 = data_filter($data['gudangpkg'], '5');
         $data_gudangpkg6 = data_filter($data['gudangpkg'], '6');
 
-
         $data_rekapalihstok1 = data_filter($data['rekapalihstok'], '1');
         $data_rekapalihstok2 = data_filter($data['rekapalihstok'], '2');
         $data_rekapalihstok3 = data_filter($data['rekapalihstok'], '3');
@@ -124,7 +126,13 @@ class HomeController extends Controller
         $data_jasa_ppmemkl_inbag5 = data_filter($data['jasa_ppmemkl_inbag'], '5');
         $data_jasa_ppmemkl_inbag6 = data_filter($data['jasa_ppmemkl_inbag'], '6');
 
-
+        $data_jasa_ppmemkl_curah1 = data_filter($data['jasa_ppmemkl_curah'], '1');
+        $data_jasa_ppmemkl_curah2 = data_filter($data['jasa_ppmemkl_curah'], '2');
+        $data_jasa_ppmemkl_curah3 = data_filter($data['jasa_ppmemkl_curah'], '3');
+        $data_jasa_ppmemkl_curah4 = data_filter($data['jasa_ppmemkl_curah'], '4');
+        $data_jasa_ppmemkl_curah5 = data_filter($data['jasa_ppmemkl_curah'], '5');
+        $data_jasa_ppmemkl_curah6 = data_filter($data['jasa_ppmemkl_curah'], '6');
+    
         $data = array(
             'len_data_voyage1' => count($data_voyage1),
             'len_data_voyage2' => count($data_voyage2),
@@ -188,6 +196,13 @@ class HomeController extends Controller
             'len_data_jasa_ppmemkl_inbag4' => count($data_jasa_ppmemkl_inbag4),
             'len_data_jasa_ppmemkl_inbag5' => count($data_jasa_ppmemkl_inbag5),
             'len_data_jasa_ppmemkl_inbag6' => count($data_jasa_ppmemkl_inbag6),
+
+            'len_data_jasa_ppmemkl_curah1' => count($data_jasa_ppmemkl_curah1),
+            'len_data_jasa_ppmemkl_curah2' => count($data_jasa_ppmemkl_curah2),
+            'len_data_jasa_ppmemkl_curah3' => count($data_jasa_ppmemkl_curah3),
+            'len_data_jasa_ppmemkl_curah4' => count($data_jasa_ppmemkl_curah4),
+            'len_data_jasa_ppmemkl_curah5' => count($data_jasa_ppmemkl_curah5),
+            'len_data_jasa_ppmemkl_curah6' => count($data_jasa_ppmemkl_curah6),
 
         );
 

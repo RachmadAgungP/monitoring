@@ -21,13 +21,13 @@
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label text-md-right">Jenis Gudang Asal</label>
                         <div class="col-md-6">
-                            {{Form::select('jenisgudanga',array('0'=> 'Pilih Jenis Gudang','1' => 'Gudang PKG', '2' => 'Gudang Petroganik'),null,['class'=>'from-control asalfilter','id'=>'asalfilters'])}}
+                            {{Form::select('jenisgudanga',array('0'=> 'Pilih Jenis Gudang','1' => 'Gudang Penyangga', '2' => 'Gudang Petroganik'),null,['class'=>'from-control asalfilter','id'=>'asalfilters'])}}
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label text-md-right">Asal Gudang</label>
-                        <div class="col-md-3">
+                        <div class="col-md-8">
                             {{Form::select('asal',$asal ,null,['class'=>'from-control asalgudang selects','id'=>'asalgudang'])}}
 
                         </div>
@@ -36,13 +36,13 @@
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label text-md-right">Jenis Gudang Tujuan</label>
                         <div class="col-md-6">
-                            {{Form::select('jenisgudangt',array('0'=> 'Pilih Jenis Gudang','1' => 'Gudang PKG', '2' => 'Gudang Petroganik'),null,['class'=>'from-control tujuanfilter','id'=>'tujuanfilters'])}}
+                            {{Form::select('jenisgudangt',array('0'=> 'Pilih Jenis Gudang','1' => 'Gudang Penyangga', '2' => 'Gudang Petroganik'),null,['class'=>'from-control tujuanfilter','id'=>'tujuanfilters'])}}
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label text-md-right">Tujuan Gudang</label>
-                        <div class="col-md-3">
+                        <div class="col-md-8">
                             {{Form::select('tujuan',$tujuan,null,['class'=>'from-control tujuangudang selects','id'=>'tujuangudang'])}}
                         </div>
                     </div>
@@ -101,9 +101,6 @@
         console.log(gedungpilih)
     });
 
-
-
-
     $(".tujuanfilter").on('change', function() {
         let categorys = $("#tujuanfilters").val()
         // console.log(categorys)
@@ -120,7 +117,7 @@
                 success: function(data) {
                     var dataObj = Object.values(data)[0];
                     var dataObjVal = Object.values(dataObj);
-                    // console.log(dataObjVal);
+
                     var dataObjKey = Object.keys(dataObj);
                     $("#tujuangudang").prop('disable', false);
                     let tampilan_option = '';

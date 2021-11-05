@@ -1,12 +1,12 @@
 
     <div class="form-group row">
-        <label class="col-md-2 col-form-label text-md-right">Lokasi Gudang</label>
+        <label class="col-md-2 col-form-label text-md-right">Nama Rekanan</label>
         <div class="col-md-6">
-            {{ Form::text('lokasi_gudang',null,['class'=>'from-control','placeholder'=>'Lokasi Gudang'])}}
+            {{ Form::select('lokasi_gudangs',$gudang_penyangga,null,['class'=>'from-control selects','placeholder'=>'Nama Rekanan'])}}
         </div>
     </div>
 
-    <div class="form-group row">
+    <!-- <div class="form-group row">
         <label class="col-md-2 col-form-label text-md-right">Alamat Gudang</label>
         <div class="col-md-6">
             {{ Form::text('alamat_gudang',null,['class'=>'from-control','placeholder'=>'Alamat Gudang'])}}
@@ -21,11 +21,11 @@
     </div>
 
     <div class="form-group row">
-        <label class="col-md-2 col-form-label text-md-right">Nama Rekanan</label>
+        <label class="col-md-2 col-form-label text-md-right">Lokasi Gudang</label>
         <div class="col-md-6">
-            {{ Form::text('nama_rekanan',null,['class'=>'from-control','placeholder'=>'Nama Rekanan'])}}
+            {{ Form::text('lokasi_gudang',null,['class'=>'from-control','placeholder'=>'Lokasi Gudang'])}}
         </div>
-    </div>
+    </div> -->
 
     <div class="form-group row">
         <label class="col-md-2 col-form-label text-md-right">Kap GP Ton</label>

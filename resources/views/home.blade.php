@@ -395,6 +395,49 @@
                         </div>
                     </div>
 
+                    {{-- Jasa PPM/EMKL Curah --}}
+                    <h5><b>Jasa PPM/EMKL Curah</b></h5>
+                    <div class="row mb-4">
+                        <div class="col-xl col-md-6">
+                            <div class="card text-white" style="background-color: rgb(35, 135, 89)">
+                                <div class="card-body">
+                                    <h4>Masih Lama</h4>
+                                    <p>jumlah: {{ $len_data_jasa_ppmemkl_curah1 }}</p>
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="/jasa-ppmemkl-curah/?cat=1">View Details</a>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col-xl col-md-6">
+                            <div class="card text-white" style="background-color: rgb(150, 35, 89)">
+                                <div class="card-body">
+                                    <h4>Perlu Dipantau</h4>
+                                    <p>jumlah: {{ $len_data_jasa_ppmemkl_curah5 }}</p>
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="/jasa-ppmemkl-curah/?cat=5">View Details</a>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl col-md-6">
+                            <div class="card text-white" style="background-color: rgb(89, 35, 150)">
+                                <div class="card-body">
+                                    <h4>Sudah Lampau</h4>
+                                    <p>jumlah: {{ $len_data_jasa_ppmemkl_curah6 }}</p>
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="/jasa-ppmemkl-curah/?cat=6">View Details</a>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

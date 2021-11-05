@@ -22,7 +22,6 @@ class GudangpetroganikImport implements ToModel, WithHeadingRow
             'alamat_gudang' => $row['alamat_gudang'],
             'provinsi' => $row['provinsi'],
             'keterangan' => $row['keterangan'],
-
         ]);
     }
 }

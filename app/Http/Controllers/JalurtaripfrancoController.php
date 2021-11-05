@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 use DataTables;
 use Illuminate\Http\Request;
 use App\Jalurtaripfranco ;
-use App\GudangPKG;
+
 use App\Gudangpetroganik;
 use App\Provinsi;
+use App\GudangPenyangga;
 
 use App\Imports\JalurtaripfrancoImport;
 use App\Kabupaten;
@@ -40,7 +41,7 @@ class JalurtaripfrancoController extends Controller
     public function getgudang($category_id)
 {
     if ($category_id == 1){
-       $data['Gudang'] = GudangPKG::pluck('lokasi_gudang','id');
+       $data['Gudang'] = GudangPenyangga::pluck('lokasi_gudang','id');
     }elseif($category_id == 2){
         $data['Gudang']= Gudangpetroganik::pluck('nama_rekanan','id');
     }
@@ -53,12 +54,7 @@ class JalurtaripfrancoController extends Controller
      */
     public function create(Request $request)
     {
-        // $asal = $request->get('asal');
-        // $tujuan = $request->get('tujuan');
-        // // print($asal);
-        // $data['asal'] = $asal;
-        // $data['tujuan'] = $tujuan;
-        $data['asal'] = GudangPKG::pluck('lokasi_gudang','lokasi_gudang');
+        $data['asal'] = GudangPenyangga::pluck('lokasi_gudang','lokasi_gudang');
         $data['tujuan'] = Kabupaten::pluck('nama_kabupaten','nama_kabupaten');
         $data['provinsi'] = Provinsi::pluck('nama_provinsi','nama_provinsi');
         return view('rekaptaripfranco.jalurtaripfranco.create',$data);
@@ -107,7 +103,7 @@ class JalurtaripfrancoController extends Controller
      */
     public function edit($id)
     {
-        $data['asal'] = GudangPKG::pluck('lokasi_gudang','lokasi_gudang');
+        $data['asal'] = GudangPenyangga::pluck('lokasi_gudang','lokasi_gudang');
         $data['tujuan'] = Kabupaten::pluck('nama_kabupaten','nama_kabupaten');
         $data['provinsi'] = Provinsi::pluck('nama_provinsi','nama_provinsi');
 
@@ -152,7 +148,6 @@ class JalurtaripfrancoController extends Controller
 
     public function importDataJalurtaripfranco(Request $request)
     {
-        // dd($request->all());
         $file = $request->file('jalur-taripfranco');
         $namaFile = $file->getClientOriginalName();
         $file->move('datajalurtaripfranco',$namaFile);

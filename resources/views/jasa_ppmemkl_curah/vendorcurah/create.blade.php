@@ -7,18 +7,17 @@
             <div class="card">
                 <div class="card-header">Input data Vendor Jasa ppm/emkl Curah</div>
                 <div class="card-body">
-                @include('validation_error')
+                    @include('validation_error')
                     {{ Form::open(['url'=>'vendor-Curah']) }}
-            
-                        @csrf
 
-                @include('jasa_ppmemkl_curah.vendorcurah.form')
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-2">
+                    @csrf
+                    @include('jasa_ppmemkl_curah.vendorcurah.form')
+                    <div class="form-group row mb-0">
+                        <div class="col-md-6 offset-md-2">
                             {{ Form::submit('Simpan Data',['class'=>'btn btn-primary btn-sm'])}}
-                            <a href="/vendor-Curah" class="btn btn-primary btn-sm">Kembali </a>    
+                            <a href="/jasa-ppmemkl-curah" class="btn btn-primary btn-sm">Kembali </a>
                         </div>
-                        </div>
+                    </div>
                     </form>
                 </div>
             </div>

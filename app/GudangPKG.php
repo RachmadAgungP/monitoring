@@ -8,11 +8,8 @@ class GudangPKG extends Model
 {
     protected $table = "gudang_pkg";
     protected $fillable = [
-        'id',
-        'lokasi_gudang',
-        'alamat_gudang',
-        'provinsi',
-        'nama_rekanan',
+        'ids',
+        'lokasi_gudangs',
         'kap_GP_Ton',
         'Kapasitas_Anper_Lain',
         'sewa_Gudang_Rpbulan',

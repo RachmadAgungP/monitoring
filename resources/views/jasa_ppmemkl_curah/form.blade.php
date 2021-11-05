@@ -25,7 +25,7 @@
    <div class="form-group row">
        <label class="col-md-2 col-form-label text-md-right">Total PBM EMKL</label>
        <div class="col-md-6">
-           {{ Form::number('total_PBM_EMKL',null,['class'=>'from-control total','id'=>'total','placeholder'=>'total'])}}
+           {{ Form::number('total_PBM_EMKL',null,['class'=>'from-control total','id'=>'total','readonly','placeholder'=>'total'])}}
        </div>
    </div>
    <div class="form-group row">

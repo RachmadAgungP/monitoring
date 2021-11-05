@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Jaluralihstok;
 use App\GudangPKG;
 use App\Gudangpetroganik;
+use App\GudangPenyangga;
 
 use App\Imports\JaluralihstokImport;
 use App\Provinsi;
@@ -38,7 +39,7 @@ class JaluralihstokController extends Controller
     public function getgudang($category_id)
 {
     if ($category_id == 1){
-       $data['Gudang'] = GudangPKG::pluck('lokasi_gudang','id');
+       $data['Gudang'] = GudangPenyangga::pluck('lokasi_gudang','id');
     }elseif($category_id == 2){
         $data['Gudang']= Gudangpetroganik::pluck('nama_rekanan','id');
     }
@@ -56,8 +57,8 @@ class JaluralihstokController extends Controller
         // // print($asal);
         // $data['asal'] = $asal;
         // $data['tujuan'] = $tujuan;
-        $data['asal'] = GudangPKG::pluck('lokasi_gudang','lokasi_gudang');
-        $data['tujuan'] = GudangPKG::pluck('lokasi_gudang','lokasi_gudang');
+        $data['asal'] = GudangPenyangga::pluck('lokasi_gudang','lokasi_gudang');
+        $data['tujuan'] = GudangPenyangga::pluck('lokasi_gudang','lokasi_gudang');
         $data['wilayah'] = Provinsi::pluck('nama_provinsi','nama_provinsi');
 
         
@@ -106,8 +107,8 @@ class JaluralihstokController extends Controller
      */
     public function edit($id)
     {
-        $data['asal'] = GudangPKG::pluck('lokasi_gudang','lokasi_gudang');
-        $data['tujuan'] = GudangPKG::pluck('lokasi_gudang','lokasi_gudang');
+        $data['asal'] = GudangPenyangga::pluck('lokasi_gudang','lokasi_gudang');
+        $data['tujuan'] = GudangPenyangga::pluck('lokasi_gudang','lokasi_gudang');
         $data['wilayah'] = Provinsi::pluck('nama_provinsi','nama_provinsi');
 
         $data['jalur_alihstok'] = Jaluralihstok::where('kode_rute',$id)->first();

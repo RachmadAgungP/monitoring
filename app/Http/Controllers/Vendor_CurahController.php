@@ -5,6 +5,7 @@ use DataTables;
 use Illuminate\Http\Request;
 use App\Vendor_Curah;
 use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\Vendor_CurahImport;
 
 class Vendor_CurahController extends Controller
 {
